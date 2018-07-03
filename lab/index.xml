@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Labs on Hacking History 2018</title>
+    <link>https://2017.hackinghistory.ca/lab/</link>
+    <description>Recent content in Labs on Hacking History 2018</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Oct 2017 10:23:23 -0400</lastBuildDate>
+    
+	<atom:link href="https://2017.hackinghistory.ca/lab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lab 06: Wordpress &amp; Wordpress Themes</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-wordpress-and-wordpress-themes/</link>
+      <pubDate>Tue, 31 Oct 2017 10:23:23 -0400</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-wordpress-and-wordpress-themes/</guid>
+      <description>Wordpress is a sophisticated &amp;ldquo;Content Management System&amp;rdquo; that uses a database to store your content, and a set of short programs written in the PHP programming language to present that content in a consistent manner. THere are many parts to this PHP &amp;ldquo;engine&amp;rdquo;, including especially themes and plugins. In this exercise you will start to set up your own wordpress site, and begin to get familiar Wordpress themes are potentially very powerful, but they can also be quite simple.</description>
+    </item>
+    
+    <item>
+      <title>Lab 01: Getting Started</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-getting-started/</link>
+      <pubDate>Tue, 12 Sep 2017 11:28:25 -0400</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-getting-started/</guid>
+      <description>Welcome to Hacking History.
+In today&amp;rsquo;s lab we learn (or recall) a little bit about some of the tools we&amp;rsquo;ll be using during the class. They are:
+ Zotero Slack Markdown Github  Next week we will start learning about HTML, but for today it&amp;rsquo;s all just fun.
+Slack and Zotero We use Slack for communicating, and Zotero for managing our bibliography. Both are described on the Tools page; I justwant you to be sure to have signed up for and tried out both of them.</description>
+    </item>
+    
+    <item>
+      <title>Lab 02: Understanding HTML</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-understanding-html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-understanding-html/</guid>
+      <description>One of the goals of this week is to help you think of the Web as a protocol-driven infrastructure. The language in which that infrastructure operates is called HTML. Like a traveller in a foreign country, you may not need to be fluent in this language, but if you know just a little bit then you&amp;rsquo;ll be much more comfortable. In this exercise we will introduce an online tool called JSBin, now one of many such tools available online, and somewhat similar to the Codeacademy website you will be using for your assignments.</description>
+    </item>
+    
+    <item>
+      <title>Lab 03: CSS and Web Styles</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-css-and-web-styles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-css-and-web-styles/</guid>
+      <description>Last week we experimented with HTMl and dipped our toes into CSS and styles. In your final projects, much of your coding time will be spent trying to get your site to look the way you want it to. If you have a firm understanding of CSS (and of where to look for more info when you&amp;rsquo;re having trouble!), this will be a lot easier.
+You already know about the Codeacademy CSS offerings.</description>
+    </item>
+    
+    <item>
+      <title>Lab 05: Javascript Basics</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-javascript-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-javascript-basics/</guid>
+      <description>Another week, another language! This is in some ways a ridiculous way to learn about programming, and you may not remember all you learn. The most important thing is to get some sense of the types of operations that take place when programming languages interact with web pages, so you can change the code you are given to get it to do exactly what you want. But in order to do this it wil lbe very helpful to know just a little bit about programming in general.</description>
+    </item>
+    
+    <item>
+      <title>Lab 05: Spatial History with Google Maps</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-05-spatial-history-with-google-maps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-05-spatial-history-with-google-maps/</guid>
+      <description>Google Maps and Spatial History Today in class we discussed spatial history, that is, history which focusses very strongly on the cultural history of space and place. There is nothing intrinsically digital about spatial history, nor is it necessarily qunatitative in nature; but the incredible development of Geographical Information Systems (GIS) in the last 15 years has made the use of interactive digital maps an attractive target for historians.</description>
+    </item>
+    
+    <item>
+      <title>Lab 10: From CSS to SASS!</title>
+      <link>https://2017.hackinghistory.ca/lab/lab-1l-from-css-to-sass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/lab-1l-from-css-to-sass/</guid>
+      <description>Now that you are alll HTML/CSS/PHP ninjas&amp;hellip;. it&amp;rsquo;s time for the next language! The web frmework we&amp;rsquo;re using &amp;ndash; &amp;ldquo;Foundation&amp;rdquo; &amp;ndash; uses a language called SASS to manage style instructions. It takes a little getting used to be soon you will start to love it, I promise.
+What&amp;rsquo;s wrong with plain old CSS? CSS is great, but it has some problems:
+ it&amp;rsquo;s repetitive: often you find yourself writing the same color codes over and over again in different selectors:  h1 { color: #ab23ab; } h2 { color: #ab23ab; }   it&amp;rsquo;s brittle: you may spend a long time figuring out the right proportions between, say, the font sizes for h1, h2,h3, and h4, or the right dimensions for div.</description>
+    </item>
+    
+    <item>
+      <title>Labs and Notes</title>
+      <link>https://2017.hackinghistory.ca/lab/labs-and-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://2017.hackinghistory.ca/lab/labs-and-notes/</guid>
+      <description>In general, each weekly seminar also includes a &amp;ldquo;lab&amp;rdquo; component in which we explore technical skills. See the individual Lab pages for more information.</description>
+    </item>
+    
+  </channel>
+</rss>

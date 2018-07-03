@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experiment in digital community">
+    <meta name="author" content="Matt Price">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Hugo - Lab 05: Javascript Basics</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/content-style.css" />
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/css/monokai-sublime.css">
+
+  </head>
+
+  <body>
+  
+  <section id="container" class="">
+
+      
+      <header class="header black-bg">
+            <div class="toggle-nav">
+                <i class="fa fa-bars"></i>
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            
+            <div class="pull-right">
+              <a href="/" class="logo"><img src="/images/hh-logo-small.png" style="height: 40px; vertical-align: bottom;"> <span style="font-size: small; text-transform: none;"></span></a>
+              
+              </div>
+            
+            <div class="top-nav notification-row">
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="nav title-row" id="top_menu">
+                <h1 class="nav top-menu">Lab 05: Javascript Basics</h1>
+            </div>
+      </header>
+      
+
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    
+        
+        <ul class="sidebar-menu">
+          
+          <li>
+          <div class="lunr-search">
+<p><b>Search:</b></p>
+    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
+     <ul id="lunr-results"></ul>
+</div>
+
+          </li>
+          
+          
+               
+      
+             
+            <li>
+              <a class="" href="/article/syllabus/">
+                
+                
+                <span>Syllabus</span>
+                </a>
+               
+
+               
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Assignments</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/assignment/overview/">Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/participation/">Participation</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/class-project-overview/">Class Project Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/project-proposal/">Project Proposal</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-05-wordpress-themes/">STA 03: Wordpress Sites</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/essay-assignment/">Essay Assignment</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-02-oral-history/">STA 02: Oral History</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/assignments/">Assignments</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-01-html--css/">STA 01: HTML &amp; CSS</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu active">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Labs</span>
+                <span class="menu-arrow fa fa-angle-down"></span>
+            </a>
+            <ul class="sub open">
+
+              
+                   
+                 <li><a href="/lab/lab-getting-started/">Lab 01: Getting Started</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-understanding-html/">Lab 02: Understanding HTML</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-css-and-web-styles/">Lab 03: CSS and Web Styles</a> </li>
+                  
+                 
+                
+                <li class="active toc-node"><a href="javascript:;">
+                    <span>Lab 05: Javascript Basics</span><span class="toc-arrow fa fa-angle-down"></span></a>
+                
+                
+                  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-javascript-and-why-do-we-learn-it">What is Javascript and why do we learn it?</a></li>
+<li><a href="#running-javascript">Running Javascript</a>
+<ul>
+<li><a href="#run-in-atom-editor">Run in Atom Editor</a></li>
+<li><a href="#console">Console</a></li>
+<li><a href="#scratchpad">Scratchpad</a></li>
+<li><a href="#accessing-the-console">Accessing the console</a></li>
+</ul></li>
+<li><a href="#some-code-to-paste-into-your-console-or-scratchpad">some code to paste into your console or scratchpad</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#loops">Loops</a>
+<ul>
+<li>
+<ul>
+<li><a href="#flow-control">Flow Control</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#accessing-the-dom">Accessing the DOM</a></li>
+<li><a href="#objects">Objects</a></li>
+<li><a href="#functions">Functions</a></li>
+</ul></li>
+</ul>
+</nav>
+                </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-05-spatial-history-with-google-maps/">Lab 05: Spatial History with Google Maps</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-wordpress-and-wordpress-themes/">Lab 06: Wordpress &amp; Wordpress Themes</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-1l-from-css-to-sass/">Lab 10: From CSS to SASS!</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/labs-and-notes/">Labs and Notes</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Miscellaneous</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/">Hacking History: Smut Edition</a> </li>
+                  
+                 
+                   
+                 <li><a href="/other/tools/">Tools for Hacking History</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+             
+          <li><a href="/slides/">Class Slides & Notes</a></li>
+
+          
+
+
+                        <li> <a href="/article/about/" target="blank"><i class='fa fa-life-ring'></i> <span>About This Site</span></a> </li>
+
+            
+               
+             
+        </ul>
+        
+
+    </div>
+
+</aside>
+
+
+      
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+                  
+                      
+                      
+                          
+                          
+                          
+                      
+                      
+                  
+              
+
+              <div class="row">
+
+                <div class="col-md-12">
+                    <section class="panel">
+                          
+                              
+                          
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 cse">
+                              
+                            </div>
+                        </div>
+
+
+<div class="col-lg-12 col-md-12">
+  
+
+<p>Another week, another language! This is in some ways a ridiculous way to learn about programming, and you may not remember all you learn. The most important thing is to get some sense of the types of operations that take place when programming languages interact with web pages, so you can change the code you are given to get it to do exactly what you want.  But in order to do this it wil lbe very helpful to know just a little bit about programming in general.</p>
+
+<h2 id="what-is-javascript-and-why-do-we-learn-it">What is Javascript and why do we learn it?</h2>
+
+<p>You&rsquo;ll remember that I made a a very general division early in the semester:</p>
+
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Style</th>
+<th>Dynamic Content &amp; Effects</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>HTML</td>
+<td>CSS</td>
+<td>Javascript</td>
+</tr>
+</tbody>
+</table>
+
+<p>In contemporary web pages, a <strong>lot</strong> of the work that runs the page is done by javascript. This is easy to see, e.g., in the &ldquo;Network&rdquo; or &ldquo;profiler&rdquo; tabs of the developer tools in Chrome or Firefox.  In general, if you want to make changes to a web page after it&rsquo;s written, javascript is the easiest way to do it (except for CSS animations, I guess).</p>
+
+<p>Javascript also has uses outside the browser &ndash; the Atom editor is written in Javascript, for instance.</p>
+
+<h2 id="running-javascript">Running Javascript</h2>
+
+<p>Because we use javascript mostly to manipulate web pages, it can be a little hard to run javascript programs.  Here are a couple of ways to try javascript form inside your browser:</p>
+
+<h3 id="run-in-atom-editor">Run in Atom Editor</h3>
+
+<p>This might be the easiest (though eventually you will need to run in a browser, e.g., if you want to practice manipulating DOM elements).  Install the <a href="https://atom.io/packages/script-runner">script-runner</a> package, or one off the alternatives like <a href="https://atom.io/packages/script">run in atom</a> or <a href="https://atom.io/packages/script">script</a>, and follow directions to run code directly in the editor.</p>
+
+<h3 id="console">Console</h3>
+
+<p>Both Chrome and Firefox have built-in &ldquo;Javascript Consoles&rdquo; accessible from the developer tools: <code>Tools \rarr Web Developer \rarr Console</code> or <code>Menu \rarr More Tools \rarr Developer \rarr Console</code></p>
+
+<h3 id="scratchpad">Scratchpad</h3>
+
+<p>The FF console is a little awkward to use for multi-line programming, so they have also provided a &ldquo;Scratchpad&rdquo; tool (<code>Shift-F4</code>), which I find helpful.</p>
+
+<h3 id="accessing-the-console">Accessing the console</h3>
+
+<p>When you run code in the browser, the easiest way to print something is with the <code>console.log</code> function. This prints text <em>to the console</em> so you will have to open the console to see if your code is working.</p>
+
+<h2 id="some-code-to-paste-into-your-console-or-scratchpad">some code to paste into your console or scratchpad</h2>
+
+<p>We can start by just fooling around with a little test code.</p>
+
+<pre><code class="language-javascript">/*
+ Here are some basic javascript constructs you will encounter in your homework
+ */
+
+// two ways to &quot;print&quot;
+console.log(&quot;hello&quot;);
+// alert(&quot;hello&quot;);
+
+
+// here is a very basic &quot;for loop&quot;:
+for (i=0; i&lt;10; i++ ) {
+  console.log(&quot;this is number: &quot; + (i+1));
+}
+
+// a simple array -- essentially a list
+var veggies = [&quot;carrot&quot;, &quot;potato&quot;, &quot;pea&quot;];
+
+// a &quot;for-of loop&quot; -- iterates over array items
+for (i of veggies) {
+  console.log(i)
+};
+
+// a for-in loop -- iterates over array length (0,1,2,3, etc)
+for (i in veggies) {
+     console.log(veggies[i])
+     };
+
+
+// the same stuff, now applied to a web page
+// this stuff won't work from inside your editor!
+// try with other element types: h2, p, etc.  
+var headings = document.getElementsByTagName(&quot;h1&quot;);
+console.log(headings);
+for (i=0; i&lt;headings.length; i++) {
+    headings[i].innerHTML = i + 1 +&quot;. &quot; + headings[i].innerHTML;
+    console.log(headings[i].innerHTML);
+};
+
+// this will overwrite the whole document!
+//document.write(&quot;hello&quot;);
+
+// objects
+
+// defines a new object type: Animal
+function Animal (name,numLegs) {
+    this.name=name;
+    this.numLegs=numLegs;
+}
+
+
+// creates a variable of type Animal
+var penguin = new Animal(&quot;Penguin&quot;, 2);
+
+// shows the internal structure of the object
+console.log (penguin);
+
+// you can iterate over the penguin's attributes
+for (i in penguin) {
+    console.log(i + &quot;: &quot; + penguin[i]);
+}
+
+// Add a new &quot;method&quot; to the object
+Animal.prototype.sayName = function() {
+    console.log(&quot;Hi my name is &quot; + this.name);
+};
+
+</code></pre>
+
+<h2 id="variables">Variables</h2>
+
+<p>You have all taken algebra, so you have all seen <em>variables</em>. Let&rsquo;s think of it this way: a variable is a box, into whic you can place a <em>value</em>.</p>
+
+<pre><code class="language-js">var myString = &quot;Hello, everyone&quot;;
+console.log(myString);
+</code></pre>
+
+<pre><code class="language-js">Hello, everyone
+</code></pre>
+
+<pre><code class="language-javascript">var myString = &quot;some value in here&quot;;
+var myNumber = 47;
+var myArray = [&quot;first is a string&quot;, 2, &quot;third is also a string&quot;];
+var myObject = {first:&quot;first is a string&quot;, second: 2, third:&quot;third is also a string&quot;};
+</code></pre>
+
+<p>In almost all programming languages, there are many variable &ldquo;types&rdquo;; javascript variables are &ldquo;dynamically typed&rdquo;, which means that the type is determined only when the variable is actually being used. This is very handy, but can sometimes lead to confusion, e.g., compare:</p>
+
+<pre><code class="language-javascript">console.log(&quot;Hello, I am a string &quot; + 1 + 2);
+console.log(1 + 2 + &quot; but I am a number&quot;);
+</code></pre>
+
+<h2 id="loops">Loops</h2>
+
+<pre><code class="language-js">// here is a very basic &quot;for loop&quot;:
+ for (i=0; i&lt;10; i++ ) {
+   console.log(&quot;this is number: &quot; + (i+1));
+ }
+
+ // a simple array -- essentially a list
+ var veggies = [&quot;carrot&quot;, &quot;potato&quot;, &quot;pea&quot;];
+
+ // a &quot;for-of loop&quot; -- iterates over array items
+ for (i of veggies) {
+   console.log(i)
+ };
+
+ // a for-in loop -- iterates over array length (0,1,2,3, etc)
+ for (i in veggies) {
+      console.log(veggies[i])
+      };
+
+
+</code></pre>
+
+<pre><code class="language-js">this is number: 1
+this is number: 2
+this is number: 3
+this is number: 4
+this is number: 5
+this is number: 6
+this is number: 7
+this is number: 8
+this is number: 9
+this is number: 10
+carrot
+potato
+pea
+carrot
+potato
+pea
+</code></pre>
+
+<pre><code class="language-javascript">for(var i = 0; i &lt; 10; i++) {
+    console.log(&quot;This is iteration number: &quot; + (i + 1) );
+}
+</code></pre>
+
+<h4 id="flow-control">Flow Control</h4>
+
+<p>also if statements &ndash; what will this print?</p>
+
+<pre><code class="language-javascript">var dimensions = 3;
+
+if (dimensions &gt; 3) {
+    warp.speed(&quot;Make it so&quot;);
+} else {
+    console.log (&quot; I dannae think she can take any more, Captain!&quot;);
+}
+
+</code></pre>
+
+<p>You&rsquo;ll learn a few more in the homework (notably <code>switch/case</code> and <code>try/catch</code>); but these two do the two basic operations you need to understand: <em>repeat</em> and <em>test</em>.</p>
+
+<h2 id="accessing-the-dom">Accessing the DOM</h2>
+
+<p>Javascript uses something called the Document Object Model to understand the web page. As far as Javascript is concerned, the DOM is a big complex object, whose parts can be identified, manipulated, and used as input for complex functions.  Here&rsquo;s a relatively simple operation you can try in the Firefox scratchpad with a :</p>
+
+<pre><code class="language-javascript">var headings = document.getElementsByTagName(&quot;h1&quot;);
+console.log(headings);
+for (i=0; i&lt;headings.length; i++) {console.log(headings[i].innerHTML);};
+// alert(headings);
+</code></pre>
+
+<h2 id="objects">Objects</h2>
+
+<p>Objects deserve special mention, because they can be hideously complex.</p>
+
+<pre><code class="language-javascript">
+// defines a new object type: Animal
+function Animal (name,numLegs) {
+    this.name=name;
+    this.numLegs=numLegs;
+}
+
+
+// creates a variable of type Animal
+var penguin = new Animal(&quot;Penguin&quot;, 2);
+
+// shows the internal structure of the object
+console.log (penguin);
+
+// you can iterate over the penguin's attributes
+for (i in penguin) {
+    console.log(i + &quot;: &quot; + penguin[i]);
+}
+
+// Add a new &quot;method&quot; to the object
+Animal.prototype.sayName = function() {
+    console.log(&quot;Hi my name is &quot; + this.name);
+};
+</code></pre>
+
+<h2 id="functions">Functions</h2>
+
+<p>Functions in JS are defined in two ways:</p>
+
+<p>As a declaration:</p>
+
+<pre><code class="language-javascript">function square(number) {
+  return number * number;
+}
+</code></pre>
+
+<p>As an expression:</p>
+
+<pre><code class="language-javascript">var square = function(number) { 
+    return number * number 
+};
+</code></pre>
+
+<p>Functions in Javascript are &ldquo;first-order objects&rdquo; and can be used in mind-bending ways.  You don&rsquo;t need to worry about those for a little while yet.</p>
+
+</div>
+
+
+
+
+                    <div class="row">
+                        <div class="footer-panel" style="display:none">
+			  <p>Last revision: January 1, 0001
+                          <span style="float: right;">Hugo v documentation</span>
+                        </p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </section>
+
+                    </div>
+
+              </div>
+              
+          </section>
+      </section>
+     
+  </section>
+  
+
+    
+    <script type="text/javascript" src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/vendor/flesler/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/vendor/twitter/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/vendor/highlightjs/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/scripts.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+       <script>
+      /* Add headers to scrollspy, stolen form material-docs */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers. this is hideous, get rid of it. */
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="/js/lunr.js"></script>
+    <script type="text/javascript">
+    var lunrIndex, $results, pagesIndex;
+ 
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+ 
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+ 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+            }
+        }
+    }
+ 
+    var searchTerm = getQueryVariable('query');
+ 
+    
+    function initLunr() {
+        
+        jQuery.getJSON("/index.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+                lunrIndex = lunr(function() {
+                    this.field("title", { boost: 10 });
+                    this.field("tags", { boost: 5 });
+                    this.field("categories", { boost: 5 });
+                    this.field("content");
+                    this.ref("uri");
+ 
+                    pagesIndex.forEach(function (page) {
+                        this.add(page)
+                    }, this)
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+ 
+    
+    function initUI() {
+        $results = $("#lunr-results");
+        jQuery("#search").keyup(function() {
+            $results.empty();
+ 
+            
+            var query = $(this).val();
+            if (query.length < 2) {
+                return;
+            }
+ 
+            var results = search(query);
+ 
+            renderResults(results);
+        });
+    }
+ 
+    
+
+    function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+ 
+    
+
+    function renderResults(results) {
+        if (!results.length) {
+            return;
+        }
+ 
+        
+        results.slice(0, 100).forEach(function(result) {
+            var $result = jQuery("<li>");
+            $result.append(jQuery("<a>", {
+                href: result.uri,
+                text: result.title
+            }));
+            $results.append($result);
+        });
+    }
+ 
+    
+    initLunr();
+ 
+    jQuery(document).ready(function() {
+        initUI();
+    });
+    </script>
+
+  </body>
+</html>
+

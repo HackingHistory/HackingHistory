@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experiment in digital community">
+    <meta name="author" content="Matt Price">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Hugo - Lab 06: Wordpress &amp; Wordpress Themes</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/content-style.css" />
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/css/monokai-sublime.css">
+
+  </head>
+
+  <body>
+  
+  <section id="container" class="">
+
+      
+      <header class="header black-bg">
+            <div class="toggle-nav">
+                <i class="fa fa-bars"></i>
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            
+            <div class="pull-right">
+              <a href="/" class="logo"><img src="/images/hh-logo-small.png" style="height: 40px; vertical-align: bottom;"> <span style="font-size: small; text-transform: none;"></span></a>
+              
+              </div>
+            
+            <div class="top-nav notification-row">
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="nav title-row" id="top_menu">
+                <h1 class="nav top-menu">Lab 06: Wordpress &amp; Wordpress Themes</h1>
+            </div>
+      </header>
+      
+
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    
+        
+        <ul class="sidebar-menu">
+          
+          <li>
+          <div class="lunr-search">
+<p><b>Search:</b></p>
+    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
+     <ul id="lunr-results"></ul>
+</div>
+
+          </li>
+          
+          
+               
+      
+             
+            <li>
+              <a class="" href="/article/syllabus/">
+                
+                
+                <span>Syllabus</span>
+                </a>
+               
+
+               
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Assignments</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/assignment/overview/">Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/participation/">Participation</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/class-project-overview/">Class Project Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/project-proposal/">Project Proposal</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-05-wordpress-themes/">STA 03: Wordpress Sites</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/essay-assignment/">Essay Assignment</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-02-oral-history/">STA 02: Oral History</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/assignments/">Assignments</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-01-html--css/">STA 01: HTML &amp; CSS</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu active">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Labs</span>
+                <span class="menu-arrow fa fa-angle-down"></span>
+            </a>
+            <ul class="sub open">
+
+              
+                   
+                 <li><a href="/lab/lab-getting-started/">Lab 01: Getting Started</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-understanding-html/">Lab 02: Understanding HTML</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-css-and-web-styles/">Lab 03: CSS and Web Styles</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-javascript-basics/">Lab 05: Javascript Basics</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-05-spatial-history-with-google-maps/">Lab 05: Spatial History with Google Maps</a> </li>
+                  
+                 
+                
+                <li class="active toc-node"><a href="javascript:;">
+                    <span>Lab 06: Wordpress &amp; Wordpress Themes</span><span class="toc-arrow fa fa-angle-down"></span></a>
+                
+                
+                  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#content-management-systems">Content Management Systems</a></li>
+</ul></li>
+<li><a href="#what-is-wordpress">What is Wordpress?</a></li>
+<li><a href="#posts-and-pages">Posts and Pages</a></li>
+<li><a href="#databases">Databases</a></li>
+<li><a href="#themes-styles-and-templates">Themes, Styles and Templates</a>
+<ul>
+<li><a href="#themes-are-collections-of-files">Themes are collections of files</a></li>
+<li><a href="#themes-are-written-primarily-in-php">Themes are written primarily in PHP</a></li>
+<li><a href="#themes-tell-wordpress-how-to-display-your-content">Themes tell wordpress how to display your content</a></li>
+<li><a href="#understanding-the-loop">Understanding the Loop</a></li>
+<li><a href="#files-in-your-theme">Files in your theme</a></li>
+<li><a href="#template-hierarchy">Template hierarchy</a></li>
+<li><a href="#plugins-and-themes">Plugins and themes</a></li>
+<li><a href="#editing-your-theme">Editing Your Theme</a>
+<ul>
+<li><a href="#headers">Headers</a></li>
+</ul></li>
+<li><a href="#learn-much-much-more">Learn much, much more</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-1l-from-css-to-sass/">Lab 10: From CSS to SASS!</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/labs-and-notes/">Labs and Notes</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Miscellaneous</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/">Hacking History: Smut Edition</a> </li>
+                  
+                 
+                   
+                 <li><a href="/other/tools/">Tools for Hacking History</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+             
+          <li><a href="/slides/">Class Slides & Notes</a></li>
+
+          
+
+
+                        <li> <a href="/article/about/" target="blank"><i class='fa fa-life-ring'></i> <span>About This Site</span></a> </li>
+
+            
+               
+             
+        </ul>
+        
+
+    </div>
+
+</aside>
+
+
+      
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+                  
+                      
+                      
+                          
+                          
+                          
+                      
+                      
+                  
+              
+
+              <div class="row">
+
+                <div class="col-md-12">
+                    <section class="panel">
+                          
+                              
+                          
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 cse">
+                              
+                            </div>
+                        </div>
+
+
+<div class="col-lg-12 col-md-12">
+  
+
+<p><a href="http://wordpress.org">Wordpress</a> is a sophisticated <a href="http://en.wikipedia.org/wiki/Content_management_system">&ldquo;Content Management System</a>&rdquo; that uses a database to store your content, and a set of short programs written in the <a href="http://php.net">PHP</a> programming language to present that content in a consistent manner.  THere are many parts to this PHP &ldquo;engine&rdquo;, including especially <a href="http://codex.wordpress.org/Using_Themes">themes</a> and <a href="http://codex.wordpress.org/Plugins">plugins</a>.  In this exercise you will start to set up your own wordpress site, and begin to get familiar    Wordpress themes are potentially very powerful, but they can also be quite simple.  In this exercise we will start modify a very, very simple theme, changing the colour scheme and layout of your website&rsquo;s presentation.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>In your personal wordpress installation &ndash; available at <a href="http://yourname.hackinghistory.ca">http://yourname.hackinghistory.ca</a> &ndash; you will have access to a completely breakable sandbox environment. Go wild!</p>
+
+<h3 id="content-management-systems">Content Management Systems</h3>
+
+<ul>
+<li>a <a href="http://en.wikipedia.org/wiki/Web_content_management_system">CMS</a> is a system that allows web pages, and structured sets of pages, to be constructed from existing documents and text/HTML entered by users who may have little knowledge of HTML or the other underlying technologies that display those pages. There are hundreds of CMS&rsquo;s in existence today, some Free/Open Source, others distributed under non-free licenses.</li>
+</ul>
+
+<h2 id="what-is-wordpress">What is Wordpress?</h2>
+
+<p>Take a look at this chart:
+
+<figure>
+    
+        <img src="/ox-hugo/data_and_metadata_on_the_web.png" />
+    
+    
+</figure>
+</p>
+
+<ul>
+<li>WP <em>assembles</em> a page from many component parts. This is accomplished by a now-complex set of <em>scripts</em> that offers instructions on what data to pull from the database and how to represent it on the page.</li>
+<li>the underlying scripts are primarily written in the computer language <a href="http://php.net/manual/en/tutorial.php">PHP</a>, one of most popular languages for web &ldquo;<a href="http://en.wikipedia.org/wiki/Server-side">server-side</a>&rdquo; programming. When a URL belonging to the site is requested, the Wordpress scripts activate, <a href="http://en.wikipedia.org/wiki/Parsing">parse</a> the URL, and translate it into a set of instructions which are used to generate the HTML for the specific page we want.</li>
+</ul>
+
+<h2 id="posts-and-pages">Posts and Pages</h2>
+
+<p>Wordpress is highly extensible through the <a href="http://codex.wordpress.org/Plugins">Plugin</a> system. However, the default installation of Wordpress comes with two main types of content:</p>
+
+<ul>
+<li><a href="http://codex.wordpress.org/Posts">Posts</a> show the origins of Wordpress as a blogging engine &ndash; they&rsquo;re a kind of content that&rsquo;s expected to be updated frequently, and to be of largely trnasitory interest; and</li>
+<li><a href="http://codex.wordpress.org/Pages">Pages</a>, which are relatively permanent pieces of content that help populate, for instance, your menu system.</li>
+</ul>
+
+<p>You&rsquo;ll often see other kinds of content &ndash; events, for instance, or links , biblographies, Facebook-style status updates; these are additional functionality that may or may not be available to you.</p>
+
+<h2 id="databases">Databases</h2>
+
+<ul>
+<li>We won&rsquo;t go into this here, but the information you see in a post is distributed across many entries in a <a href="http://computer.howstuffworks.com/question599.htm">relational database</a>. Knowing this can sometimes help you to track down errors that sneak into your website through admin carelessness.</li>
+</ul>
+
+<h2 id="themes-styles-and-templates">Themes, Styles and Templates</h2>
+
+<ul>
+<li>The look and feel of your website is also controlled by PHP files, often with help from files written in other languages, especially <a href="http://computer.howstuffworks.com/question599.htm">CSS</a> and <a href="http://www.w3schools.com/js/">Javascript</a>. Sometimes the look of your website will be affected by <a href="http://codex.wordpress.org/Plugins">Plugins</a>, but most of what you see is related instead to your <a href="http://codex.wordpress.org/Themes">Theme</a>.</li>
+<li>A <strong>Theme</strong> is a collection of files &ndash; at minimum two, but often many more &ndash; from which wordpress takes instructions when presenting the page.  There are thousands of themes in the <a href="http://wordpress.org/extend/themes/">official directory</a> and thousands more for sale or download outside it.</li>
+<li>The easiest way to install a new theme is to <strong>download it</strong> using the Wordpress Admin interface.  Sometimes this won&rsquo;t work &ndash; if you&rsquo;re writing your own theme, for instance!  I&rsquo;m hoping we will have a chance to write our own <a href="http://codex.wordpress.org/Child_Themes">Child Themes</a> later on, so if you want to do that, drop me a line and I&rsquo;ll hook you up with <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP</a> access to the server.</li>
+</ul>
+
+<h3 id="themes-are-collections-of-files">Themes are collections of files</h3>
+
+<ul>
+<li>they live in your wordpress install:</li>
+</ul>
+
+
+<figure>
+    
+        <img src="/ox-hugo/wp-file-structure.jpg" />
+    
+    
+</figure>
+
+
+<h3 id="themes-are-written-primarily-in-php">Themes are written primarily in PHP</h3>
+
+<p>PHP is a programming language developed specifically for writing web pages.  Most PHP files consist of HTML and PHP intermixed with each other. This can be a little confusing, but you will get used to it. We will puzzle through the PHP syntax together, but you might want to try the <a href="http://www.codecademy.com/en/tracks/php">Codeacademy PHP track</a> as an introduction to the language basics.  Knowing just a little will make your work a lot easier next semester.</p>
+
+<pre><code class="language-php">&lt;?php echo('Hello World'); ?&gt;
+</code></pre>
+
+<h3 id="themes-tell-wordpress-how-to-display-your-content">Themes tell wordpress how to display your content</h3>
+
+
+<figure>
+    
+        <img src="//pengbos.com/wp-content/uploads/2010/11/wp.jpg" />
+    
+    
+</figure>
+
+
+<h3 id="understanding-the-loop">Understanding the Loop</h3>
+
+<p>One of the first things you will encounter in a Wordpress theme is &ldquo;the loop&rdquo;, which usually looks like this:</p>
+
+<pre><code class="language-nil">&lt;?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?&gt;
+        &lt;!-- do stuff ... --&gt;
+&lt;?php endwhile; else : ?&gt;
+        &lt;p&gt;&lt;?php _e( 'Sorry, no posts matched your criteria.' ); ?&gt;&lt;/p&gt;
+&lt;?php endif; ?&gt;
+</code></pre>
+
+<p>This is a little hard to read, because it uses PHP&rsquo;s hideous <a href="http://php.net/manual/en/control-structures.alternative-syntax.php">alternate syntax for control structures</a>. Let&rsquo;s rewrite it in the ordinary syntax:</p>
+
+<pre><code class="language-nil">&lt;?php
+if ( have_posts() ) {
+        while ( have_posts() ) {
+                the_post();
+                //
+                // Post Content here: do stuff
+                //
+        } // end while
+} else {  ?&gt;
+    &lt;p&gt;
+    &lt;?php _e( 'Sorry, no posts matched your criteria.' ); } // end if/else ?&gt;
+
+</code></pre>
+
+<p>What the heck does this mean? Well, you&rsquo;ll see there is a <code>while</code> loop wrapped in an <code>if</code> test.  Then there are two functions &ndash; can you see them?  The <a href="https://codex.wordpress.org/The_Loop">wordpress docs</a> explain it this way:</p>
+
+<blockquote>
+<p>In English (PHP types and people familiar with code speak can skip to below), the above would be read: If we are going to be displaying posts, then get them, one at a time. For each post in the list, display it according to <!-- do stuff ... -->. When you hit the last post, stop. The do stuff line(s), are template dependent.</p>
+
+<p>A little aside on Do stuff: in this example it is simply a placeholder for a bunch of code that determines how to format and display each post on a page.</p>
+</blockquote>
+
+<p>Digging a little deeper, we find:</p>
+
+<blockquote>
+<p>An explanation for the coders out there: The have_posts() and the_post() are convenience wrappers around the global $wp_query object, which is where all of the action is. The $wp_query is called in the blog header and fed query arguments coming in through GET and PATH_INFO. The $wp_query takes the arguments and builds and executes a DB query that results in an array of posts. This array is stored in the object and also returned back to the blog header where it is stuffed into the global $posts array (for backward compatibility with old post loops).</p>
+</blockquote>
+
+<p>So, basically:</p>
+
+<ul>
+<li><code>the_post()</code> is a function that grabs one member of an array of posts &ndash; itself a very complex object &ndash; and dumps it into a new object called <code>$post</code>.</li>
+<li>Within the loop, you will then call on other function to access properties of the post.  You can also access those properties directly, but it is often hard to do that.  So, for instance, you might write:</li>
+</ul>
+
+<pre><code class="language-nil">&lt;?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?&gt;
+&lt;article id=&quot;post-&lt;?php the_ID(); ?&gt;&quot;&gt;
+    &lt;header&gt;
+        &lt;h2&gt;&lt;a href=&quot;&lt;?php the_permalink(); ?&gt;&quot;&gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;entry-content&quot;&gt;
+        &lt;figure&gt;&lt;a href=&quot;&lt;?php the_permalink(); ?&gt;&quot;&gt;&lt;?php if ( has_post_thumbnail() ) {the_post_thumbnail('large'); } ?&gt;&lt;/a&gt;&lt;/figure&gt; &lt;?php the_excerpt(); ?&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;?php endwhile; else : ?&gt;
+        &lt;p&gt;&lt;?php _e( 'Sorry, no posts matched your criteria.' ); ?&gt;&lt;/p&gt;
+&lt;?php endif; ?&gt;
+</code></pre>
+
+<p>Let&rsquo;s go over each of these functions in class.</p>
+
+<h3 id="files-in-your-theme">Files in your theme</h3>
+
+<ul>
+<li><strong>style.css:</strong>  your stylesheet; you need this</li>
+<li><strong>functions.php:</strong> you&rsquo;re going to need this too</li>
+<li><strong>index.php:</strong> this is the default template for your theme; you can&rsquo;t live without it</li>
+<li><strong>header.php:</strong> controls your header.</li>
+<li><strong>footer.php:</strong> controls your footer area</li>
+<li><strong>sidebar.php:</strong> generates your sidebar</li>
+</ul>
+
+<h3 id="template-hierarchy">Template hierarchy</h3>
+
+<p>remember this:</p>
+
+
+<figure>
+    
+        <img src="//pengbos.com/wp-content/uploads/2010/11/wp.jpg" />
+    
+    
+</figure>
+
+
+<p>Here is a more detailed view:</p>
+
+
+<figure>
+    
+        <img src="/ox-hugo/Template_Hierarchy.png" />
+    
+    
+</figure>
+
+
+<p>When accessing a piece of data from the database, Wordpress will check in sequence to see if appropriate templates are available and use the first matching template it finds.</p>
+
+<h3 id="plugins-and-themes">Plugins and themes</h3>
+
+<ul>
+<li>Themes control appearance</li>
+<li>plugins add functionality</li>
+<li>but sometimes the difference isn&rsquo;t so clear</li>
+<li>We will try to keep things pretty well-separated, but sometimes it&rsquo;s just much easier to do all your programming in a theme.</li>
+</ul>
+
+<h3 id="editing-your-theme">Editing Your Theme</h3>
+
+<ul>
+<li>I recommend editing directly from Atom. We&rsquo;ll discuss in class how to do it. However, if that doesn&rsquo;t work, you can try one of the options below:
+
+<ul>
+<li>install one of several Wordpress plugins that make theme editing a litlte easier:
+
+<ul>
+<li><a href="https://en-ca.wordpress.org/plugins/wp-editor/">https://en-ca.wordpress.org/plugins/wp-editor/</a>WP-editor]] appears to be the best maintained</li>
+<li><a href="http://wordpress.org/plugins/wpide/">wp-ide</a> is one I&rsquo;ve used in the past.</li>
+<li>If these feel a little awkward try <a href="http://wordpress.org/plugins/better-file-editor/">better file editor</a> instead &ndash; it may be sufficient for our needs (I haven&rsquo;t experimented with it yet).</li>
+</ul></li>
+</ul></li>
+<li>try changing the &lsquo;powered-by&rsquo; text in the footer to our starter theme.  Did you make it work? Did you (alternatively) break the Internet?</li>
+<li>Check out functions.php, and then sidebar.php.  Can you understand what&rsquo;s going on?  It&rsquo;s not easy to understand!</li>
+<li>try editing the css enough so that you can get something un-hideous.</li>
+</ul>
+
+<h4 id="headers">Headers</h4>
+
+<p>Right now there is no custom header support in our theme!  To use a header image,
+add this code to functions.php:</p>
+
+<pre><code class="language-php">&lt;?php add_theme_support('custom-header); ?&gt;
+</code></pre>
+
+<p>And put this somewhere in header.php:</p>
+
+<pre><code class="language-php">&lt;img src=&quot;&lt;?php echo( get_header_image() ); ?&gt;&quot; alt=&quot;&lt;?php echo( get_bloginfo( 'title' ) ); ?&gt;&quot; /&gt;
+
+</code></pre>
+
+<h3 id="learn-much-much-more">Learn much, much more</h3>
+
+<p>There is a huge amount of information online at the <a href="http://codex.wordpress.org/Stepping_into_Templates">Wordpress Codex</a>.  That last link is a good starting point, and so is the <a href="http://codex.wordpress.org/Theme_Development">Theme Development Page</a>.  There is lots and lots and lots to learn here&hellip;</p>
+
+</div>
+
+
+
+
+                    <div class="row">
+                        <div class="footer-panel" style="display:none">
+			  <p>Last revision: October 31, 2017
+                          <span style="float: right;">Hugo v documentation</span>
+                        </p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </section>
+
+                    </div>
+
+              </div>
+              
+          </section>
+      </section>
+     
+  </section>
+  
+
+    
+    <script type="text/javascript" src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/vendor/flesler/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/vendor/twitter/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/vendor/highlightjs/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/scripts.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+       <script>
+      /* Add headers to scrollspy, stolen form material-docs */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers. this is hideous, get rid of it. */
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="/js/lunr.js"></script>
+    <script type="text/javascript">
+    var lunrIndex, $results, pagesIndex;
+ 
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+ 
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+ 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+            }
+        }
+    }
+ 
+    var searchTerm = getQueryVariable('query');
+ 
+    
+    function initLunr() {
+        
+        jQuery.getJSON("/index.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+                lunrIndex = lunr(function() {
+                    this.field("title", { boost: 10 });
+                    this.field("tags", { boost: 5 });
+                    this.field("categories", { boost: 5 });
+                    this.field("content");
+                    this.ref("uri");
+ 
+                    pagesIndex.forEach(function (page) {
+                        this.add(page)
+                    }, this)
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+ 
+    
+    function initUI() {
+        $results = $("#lunr-results");
+        jQuery("#search").keyup(function() {
+            $results.empty();
+ 
+            
+            var query = $(this).val();
+            if (query.length < 2) {
+                return;
+            }
+ 
+            var results = search(query);
+ 
+            renderResults(results);
+        });
+    }
+ 
+    
+
+    function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+ 
+    
+
+    function renderResults(results) {
+        if (!results.length) {
+            return;
+        }
+ 
+        
+        results.slice(0, 100).forEach(function(result) {
+            var $result = jQuery("<li>");
+            $result.append(jQuery("<a>", {
+                href: result.uri,
+                text: result.title
+            }));
+            $results.append($result);
+        });
+    }
+ 
+    
+    initLunr();
+ 
+    jQuery(document).ready(function() {
+        initUI();
+    });
+    </script>
+
+  </body>
+</html>
+

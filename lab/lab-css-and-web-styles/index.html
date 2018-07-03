@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experiment in digital community">
+    <meta name="author" content="Matt Price">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Hugo - Lab 03: CSS and Web Styles</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/content-style.css" />
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/css/monokai-sublime.css">
+
+  </head>
+
+  <body>
+  
+  <section id="container" class="">
+
+      
+      <header class="header black-bg">
+            <div class="toggle-nav">
+                <i class="fa fa-bars"></i>
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            
+            <div class="pull-right">
+              <a href="/" class="logo"><img src="/images/hh-logo-small.png" style="height: 40px; vertical-align: bottom;"> <span style="font-size: small; text-transform: none;"></span></a>
+              
+              </div>
+            
+            <div class="top-nav notification-row">
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="nav title-row" id="top_menu">
+                <h1 class="nav top-menu">Lab 03: CSS and Web Styles</h1>
+            </div>
+      </header>
+      
+
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    
+        
+        <ul class="sidebar-menu">
+          
+          <li>
+          <div class="lunr-search">
+<p><b>Search:</b></p>
+    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
+     <ul id="lunr-results"></ul>
+</div>
+
+          </li>
+          
+          
+               
+      
+             
+            <li>
+              <a class="" href="/article/syllabus/">
+                
+                
+                <span>Syllabus</span>
+                </a>
+               
+
+               
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Assignments</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/assignment/overview/">Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/participation/">Participation</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/class-project-overview/">Class Project Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/project-proposal/">Project Proposal</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-05-wordpress-themes/">STA 03: Wordpress Sites</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/essay-assignment/">Essay Assignment</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-02-oral-history/">STA 02: Oral History</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/assignments/">Assignments</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-01-html--css/">STA 01: HTML &amp; CSS</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu active">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Labs</span>
+                <span class="menu-arrow fa fa-angle-down"></span>
+            </a>
+            <ul class="sub open">
+
+              
+                   
+                 <li><a href="/lab/lab-getting-started/">Lab 01: Getting Started</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-understanding-html/">Lab 02: Understanding HTML</a> </li>
+                  
+                 
+                
+                <li class="active toc-node"><a href="javascript:;">
+                    <span>Lab 03: CSS and Web Styles</span><span class="toc-arrow fa fa-angle-down"></span></a>
+                
+                
+                  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#css-basics">CSS Basics</a></li>
+<li><a href="#css-selectors">CSS Selectors</a>
+<ul>
+<li><a href="#selector-types">Selector types</a></li>
+</ul></li>
+<li><a href="#fonts-colors-and-borders">Fonts, colors and borders</a></li>
+<li><a href="#display-block-vs-dot-inline">Display: Block vs. Inline</a></li>
+<li><a href="#box-model">Box Model</a></li>
+<li><a href="#positioning">Positioning</a></li>
+<li><a href="#positioning-2-float">Positioning 2: Float</a></li>
+<li><a href="#changes-comin-round-real-soon">Changes Comin&rsquo; Round Real Soon</a></li>
+</ul></li>
+</ul>
+</nav>
+                </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-javascript-basics/">Lab 05: Javascript Basics</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-05-spatial-history-with-google-maps/">Lab 05: Spatial History with Google Maps</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-wordpress-and-wordpress-themes/">Lab 06: Wordpress &amp; Wordpress Themes</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-1l-from-css-to-sass/">Lab 10: From CSS to SASS!</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/labs-and-notes/">Labs and Notes</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Miscellaneous</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/">Hacking History: Smut Edition</a> </li>
+                  
+                 
+                   
+                 <li><a href="/other/tools/">Tools for Hacking History</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+             
+          <li><a href="/slides/">Class Slides & Notes</a></li>
+
+          
+
+
+                        <li> <a href="/article/about/" target="blank"><i class='fa fa-life-ring'></i> <span>About This Site</span></a> </li>
+
+            
+               
+             
+        </ul>
+        
+
+    </div>
+
+</aside>
+
+
+      
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+                  
+                      
+                      
+                          
+                          
+                          
+                      
+                      
+                  
+              
+
+              <div class="row">
+
+                <div class="col-md-12">
+                    <section class="panel">
+                          
+                              
+                          
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 cse">
+                              
+                            </div>
+                        </div>
+
+
+<div class="col-lg-12 col-md-12">
+  
+
+<p>Last week we experimented with HTMl and dipped our toes into CSS and styles.  In your final projects, much of your coding time will be spent trying to get your site to look the way you want it to.  If you have a firm understanding of CSS (and of where to look for more info when you&rsquo;re having trouble!), this will be a lot easier.</p>
+
+<p>You already know about the <a href="http://www.codecademy.com/courses/web-beginner-en-TlhFi/0/1?curriculum_id=50579fb998b470000202dc8b">Codeacademy</a> CSS offerings.  Two other helpful tutorial sites are <a href="http://learn.shayhowe.com/">shayhowe</a> and  <a href="http://learnlayout.com/">Learn Layout</a>, to which I&rsquo;ll be referring later; and there are many other resources available on the web.</p>
+
+<h2 id="css-basics">CSS Basics</h2>
+
+<p>CSS is the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets</a> Language; it is a powerful tool for controlling the appearance of web pages (and sometimes other documents, too).  It works in the following way:</p>
+
+<ul>
+<li>a web page links to a stylesheet</li>
+<li>the stylesheet instructs the browser as to how to display various kinds of web pages</li>
+<li>the browser then renders the page according to those instructions.</li>
+</ul>
+
+<p>Sometimes when you have a really slow Internet connection, you will see a very ugly, cluttured web page before a smooth, clean, modern-looking website loads.  That&rsquo;s because your browser has loaded the web page but is having trouble accessing the stylesheet.  E.g., here is the New York Times with and without CSS:</p>
+
+
+<figure class="compare">
+    
+        <img src="/images/nytimes-w-css.png" />
+    
+    
+</figure>
+
+
+
+<figure class="compare">
+    
+        <img src="/images/nytimes-no-css.png" />
+    
+    
+</figure>
+
+
+<p>So, while HTML is responsible for the <strong>structure and content</strong> of a website, CSS is responsible for its <strong>presentation</strong>.</p>
+
+<h2 id="css-selectors">CSS Selectors</h2>
+
+<p>When you look at a CSS file, you will see it is divided into a bunch of stanzas, like this.  Each of these stanzas is called a &ldquo;selector statement&rdquo;:</p>
+
+<pre><code class="language-css">h1 {
+    color:blue;
+    font-family:serif; 
+    font-size:24px; 
+}
+
+div {
+    border: 1px solid black;
+}
+
+div.main p {
+    color:red;
+}
+
+#specialid {
+    float:left;
+}
+</code></pre>
+
+<p>They all follow the same pattern:</p>
+
+<ul>
+<li>first, a <strong>selector</strong> that identifies the elements to which these instructions will apply</li>
+<li>then <strong>an open brace</strong> &ldquo;{&rdquo; which marks the start of the actual instructions</li>
+<li>then a series of <strong>property-value pairs</strong>.  Each of these sets the <em>value</em> of a particular <em>property</em> (duh).  Note that at the end of a property, there is <strong>always</strong> a semi-colon!</li>
+<li>finally, <strong>a closing brace</strong> that ends the selector declaration.</li>
+</ul>
+
+<h3 id="selector-types">Selector types</h3>
+
+<p>Though simple in principle, CSS selectors can be confusing.  Here are some basic selector types:</p>
+
+<ul>
+<li><strong>Element</strong> selectors:  these just give the element (like h1, p, div, span, etc.).  they apply to all elements of this type.</li>
+<li><strong>Class</strong> selectors:  these give the name of a class attribute that an HTML element may have.  This selector will always begin with a period (&ldquo;.&rdquo;).  So for instance:</li>
+</ul>
+
+<pre><code class="language-html">&lt;p class=&quot;coolpara&quot;&gt;Some Content&lt;/p&gt;
+</code></pre>
+
+<pre><code class="language-css">.coolpara {
+color:green;
+}
+</code></pre>
+
+<ul>
+<li><strong>ID</strong> selector:  this addresses the element with a particular ID:</li>
+</ul>
+
+<pre><code class="language-html">&lt;p id=&quot;myfave&quot;&gt;Some Content&lt;/p&gt;
+</code></pre>
+
+<pre><code class="language-css">#myfave {
+color:yellow;
+}
+</code></pre>
+
+<ul>
+<li>Finally, we have many more complex selectors.  This one here is a descendant selector:</li>
+</ul>
+
+<pre><code class="language-css">div.main p {
+      color:red;
+  }
+</code></pre>
+
+<p>It addresses every p that is contained inside a div of class &ldquo;main.&rdquo;</p>
+
+<h2 id="fonts-colors-and-borders">Fonts, colors and borders</h2>
+
+<p>A lot of what we do with CSS is to set fonts and colors.  Here are some examples:</p>
+
+<pre><code class="language-css">div.main {
+      color: rgb(150,150,150);
+      background-color: (#b0c4ee);
+      text-align: center;
+      text-decoration:underline;
+      font-family: &quot;Times New Roman&quot;, Times, Serif;
+      font-style:italic;
+      font-size:1.25em;
+      border: 4px green solid;
+      border-radius:20%;
+  }
+</code></pre>
+
+<p>There are plenty of other properties that can be set, in much the same way.</p>
+
+<h2 id="display-block-vs-dot-inline">Display: Block vs. Inline</h2>
+
+<h2 id="box-model">Box Model</h2>
+
+<p>One important notion to understand in CSS is the so-called &ldquo;<a href="http://www.w3.org/TR/CSS2/box.html">Box Model</a>&rdquo;, which accounts for the distribution of whitespace around elements.  A lot of the grief you will encounter when designing websites will come back to the box model, so it&rsquo;s important to learn it:</p>
+
+
+<figure>
+    
+        <img src="//2014.hackinghistory.ca/wp-content/uploads/2014/09/wpid-boxmodel.png" />
+    
+    
+</figure>
+
+
+<p>For each element, you have the actual content, which is surrounded by the <strong>padding</strong>, surrounded in turn by the <strong>border</strong>, and once again surrounded by the <strong>margin.</strong>  So for instance, try this code in JSBin:</p>
+
+<pre><code class="language-css">.simple {
+  width: 500px;
+  margin: 20px auto;
+  border 1px red solid;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border: 10px blue solid;
+}
+</code></pre>
+
+<p><code>&lt;div class=&quot;fancy&quot;&gt;</code> will look a lot bigger than <code>&lt;div class=&quot;simple&quot;&gt;</code>, even though they are nominally the same size!</p>
+
+<p>There are two ways to deal with this:</p>
+
+<ol>
+<li>subtract the size of the padding and border from your width values</li>
+<li>use the new &ldquo;box-sizing:border-box&rdquo; attribute.  This will do all the math for you.</li>
+</ol>
+
+<h2 id="positioning">Positioning</h2>
+
+<p>This is a difficult subject.  When you are dealing with lots of different screen sizes and resolutions, and different devices with different fonts installed, etc., it is not trivial to position every element precisely where you want it.  You will find a lot of your teeth-gnashing time is spent trying to get various columns of content to line up pretty, center themselves, etc.</p>
+
+<p>The CSS &ldquo;position&rdquo; property has four possible values, whose names are <a href="http://learnlayout.com/position.html">impossible to remember and anyway don&rsquo;t make sense</a>.  The four most important are:</p>
+
+<pre><code class="language-css">.static {
+  position: static;
+}
+.relative1 {
+  position: relative;
+}
+.relative2 {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  width: 500px;
+}
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+}
+.absolute {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+</code></pre>
+
+<ul>
+<li><strong>Static</strong> positioning is the default.  A statically-positioned element is said to be &ldquo;unpositioned&rdquo;.</li>
+<li><strong>Relatively</strong> positioned elements are displaced <em>relative</em> to the position they &ldquo;ought&rdquo; to be occupying (according to the defaults).  But meanwhile, the space it &ldquo;ought&rdquo; to be occupying is still considered &ldquo;taken&rdquo; by the browser, which won&rsquo;t put anything else in that space unless you force it to do so.</li>
+<li><strong>fixed</strong> elements have their position <em>fixed</em> to a spot on the screen (which is called &ldquo;the viewport&rdquo; in CSS talk).  This is great when you want a fixed header or footer.</li>
+<li><strong>absolutely</strong>-positioned elements are like fixed elements, only they&rsquo;re positioned relative to the <em>closest positioned ancestor</em>, usually an element with a position property value of &ldquo;relative&rdquo;.</li>
+</ul>
+
+<p>Understanding this well involves fiddling a lot with code; rather than make a bunch of fiddly exercies myself, I&rsquo;ll direct you <a href="http://www.codecademy.com/courses/web-beginner-en-6merh/3/1?curriculum_id=50579fb998b470000202dc8b">the codeacademy positioning exercies</a>, which have a great help system that makes things a little easier.</p>
+
+<h2 id="positioning-2-float">Positioning 2: Float</h2>
+
+<p>So, that&rsquo;s one way to position elements.  Another is to use the <strong>float</strong> property, which imagines the page flowing like water.  The element will &ldquo;float&rdquo; left or right, and everything else will <em>flow around it</em>.  To stop the flowing &ndash; that is, to require the next element to appear <strong>below</strong> a floated element &ndash; that next element will need to apply the <strong>clear</strong> property, which stops the float.</p>
+
+<p>Let&rsquo;s play around with this briefly <a href="http://jsbin.com/dakedo/1/edit?html,css,output">in JSBin</a>.</p>
+
+<h2 id="changes-comin-round-real-soon">Changes Comin&rsquo; Round Real Soon</h2>
+
+<p>All of what you just learned is in the process of changing dramatically.  Two new new CSS modules, <strong><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a></strong> and  makes a lot of this stuff much easier, but takes some practice to understand.</p>
+
+<p>It turns out that the theme framework we use may be converting to flexbox very soon. So, <a href="http://jsbin.com/yukiwe/3/edit?html,css">here</a> is a very quick introduction to flexbox.  You may want to look at <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">this cheatsheet</a>, this <a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">slightly more verbose one</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">this very detailed specification</a>. Meanwhile, there are lots of other new CSS features coming along, which will be supported by more and more browsers as we move forwards. We will keep an eye out for those as we continue; meanwhile, if you want to, you can check out <a href="http://jsbin.com/bawoqo/3/edit?html,css,output">transitions</a> and <a href="https://css-tricks.com/almanac/properties/a/animation/">learn</a> a little bit about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">animations</a>.</p>
+
+</div>
+
+
+
+
+                    <div class="row">
+                        <div class="footer-panel" style="display:none">
+			  <p>Last revision: January 1, 0001
+                          <span style="float: right;">Hugo v documentation</span>
+                        </p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </section>
+
+                    </div>
+
+              </div>
+              
+          </section>
+      </section>
+     
+  </section>
+  
+
+    
+    <script type="text/javascript" src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/vendor/flesler/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/vendor/twitter/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/vendor/highlightjs/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/scripts.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+       <script>
+      /* Add headers to scrollspy, stolen form material-docs */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers. this is hideous, get rid of it. */
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="/js/lunr.js"></script>
+    <script type="text/javascript">
+    var lunrIndex, $results, pagesIndex;
+ 
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+ 
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+ 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+            }
+        }
+    }
+ 
+    var searchTerm = getQueryVariable('query');
+ 
+    
+    function initLunr() {
+        
+        jQuery.getJSON("/index.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+                lunrIndex = lunr(function() {
+                    this.field("title", { boost: 10 });
+                    this.field("tags", { boost: 5 });
+                    this.field("categories", { boost: 5 });
+                    this.field("content");
+                    this.ref("uri");
+ 
+                    pagesIndex.forEach(function (page) {
+                        this.add(page)
+                    }, this)
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+ 
+    
+    function initUI() {
+        $results = $("#lunr-results");
+        jQuery("#search").keyup(function() {
+            $results.empty();
+ 
+            
+            var query = $(this).val();
+            if (query.length < 2) {
+                return;
+            }
+ 
+            var results = search(query);
+ 
+            renderResults(results);
+        });
+    }
+ 
+    
+
+    function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+ 
+    
+
+    function renderResults(results) {
+        if (!results.length) {
+            return;
+        }
+ 
+        
+        results.slice(0, 100).forEach(function(result) {
+            var $result = jQuery("<li>");
+            $result.append(jQuery("<a>", {
+                href: result.uri,
+                text: result.title
+            }));
+            $results.append($result);
+        });
+    }
+ 
+    
+    initLunr();
+ 
+    jQuery(document).ready(function() {
+        initUI();
+    });
+    </script>
+
+  </body>
+</html>
+

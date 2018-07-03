@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experiment in digital community">
+    <meta name="author" content="Matt Price">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Hugo - Lab 05: Spatial History with Google Maps</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/content-style.css" />
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/css/monokai-sublime.css">
+
+  </head>
+
+  <body>
+  
+  <section id="container" class="">
+
+      
+      <header class="header black-bg">
+            <div class="toggle-nav">
+                <i class="fa fa-bars"></i>
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            
+            <div class="pull-right">
+              <a href="/" class="logo"><img src="/images/hh-logo-small.png" style="height: 40px; vertical-align: bottom;"> <span style="font-size: small; text-transform: none;"></span></a>
+              
+              </div>
+            
+            <div class="top-nav notification-row">
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="nav title-row" id="top_menu">
+                <h1 class="nav top-menu">Lab 05: Spatial History with Google Maps</h1>
+            </div>
+      </header>
+      
+
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    
+        
+        <ul class="sidebar-menu">
+          
+          <li>
+          <div class="lunr-search">
+<p><b>Search:</b></p>
+    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
+     <ul id="lunr-results"></ul>
+</div>
+
+          </li>
+          
+          
+               
+      
+             
+            <li>
+              <a class="" href="/article/syllabus/">
+                
+                
+                <span>Syllabus</span>
+                </a>
+               
+
+               
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Assignments</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/assignment/overview/">Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/participation/">Participation</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/class-project-overview/">Class Project Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/project-proposal/">Project Proposal</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-05-wordpress-themes/">STA 03: Wordpress Sites</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/essay-assignment/">Essay Assignment</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-02-oral-history/">STA 02: Oral History</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/assignments/">Assignments</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-01-html--css/">STA 01: HTML &amp; CSS</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu active">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Labs</span>
+                <span class="menu-arrow fa fa-angle-down"></span>
+            </a>
+            <ul class="sub open">
+
+              
+                   
+                 <li><a href="/lab/lab-getting-started/">Lab 01: Getting Started</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-understanding-html/">Lab 02: Understanding HTML</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-css-and-web-styles/">Lab 03: CSS and Web Styles</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-javascript-basics/">Lab 05: Javascript Basics</a> </li>
+                  
+                 
+                
+                <li class="active toc-node"><a href="javascript:;">
+                    <span>Lab 05: Spatial History with Google Maps</span><span class="toc-arrow fa fa-angle-down"></span></a>
+                
+                
+                  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#google-maps-and-spatial-history">Google Maps and Spatial History</a></li>
+<li><a href="#read-this-part-follow-the-links">Read this part! Follow the links!</a></li>
+<li><a href="#what-is-a-gis">What is a GIS?</a></li>
+<li><a href="#controlling-google-maps">Controlling Google Maps</a></li>
+<li><a href="#using-markdown">Using Markdown</a></li>
+<li><a href="#the-exercise">The Exercise</a></li>
+<li><a href="#the-code">The code</a>
+<ul>
+<li><a href="#javascript">Javascript</a></li>
+<li><a href="#html">HTML</a></li>
+<li><a href="#css">CSS</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-wordpress-and-wordpress-themes/">Lab 06: Wordpress &amp; Wordpress Themes</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-1l-from-css-to-sass/">Lab 10: From CSS to SASS!</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/labs-and-notes/">Labs and Notes</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Miscellaneous</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/">Hacking History: Smut Edition</a> </li>
+                  
+                 
+                   
+                 <li><a href="/other/tools/">Tools for Hacking History</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+             
+          <li><a href="/slides/">Class Slides & Notes</a></li>
+
+          
+
+
+                        <li> <a href="/article/about/" target="blank"><i class='fa fa-life-ring'></i> <span>About This Site</span></a> </li>
+
+            
+               
+             
+        </ul>
+        
+
+    </div>
+
+</aside>
+
+
+      
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+                  
+                      
+                      
+                          
+                          
+                          
+                      
+                      
+                  
+              
+
+              <div class="row">
+
+                <div class="col-md-12">
+                    <section class="panel">
+                          
+                              
+                          
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 cse">
+                              
+                            </div>
+                        </div>
+
+
+<div class="col-lg-12 col-md-12">
+  
+
+<h2 id="google-maps-and-spatial-history">Google Maps and Spatial History</h2>
+
+<p>Today in class we discussed <em>spatial history</em>, that is, history which focusses very strongly on the cultural history of space and place. There is nothing <em>intrinsically digital</em> about spatial history, nor is it necessarily qunatitative in nature; but the incredible development of Geographical Information Systems (GIS) in the last 15 years has made the use of interactive digital maps an attractive target for historians.</p>
+
+<p>Sophisticated works such as the <a href="http://web.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=29">Spatial History Project</a> and Ben Schmidt&rsquo;s <a href="http://sappingattention.blogspot.co.uk/2012/10/data-narratives-and-structural.html">Whaling Maps Project</a> take substantial technical effort to achieve their effects; in general, lengthy training in the use of specialized GIS software is required. We have our own example in the <a href="http://decima.chass.utoronto.ca/">DECIMA Project</a> run by Prof. Terpstra in our department.</p>
+
+<p>Our approach will be decidedly more lightweight. In class today, we will build a very simple &ldquo;Geographical Information System&rdquo; around a Google Map. Google Maps are, in fact, highly sophisticated GIS&rsquo;s, with powerful tools for accessing various layers of information; but in order to work with them, we will need to use a very small amount of Javascript.</p>
+
+<h2 id="read-this-part-follow-the-links">Read this part! Follow the links!</h2>
+
+<p>Today&rsquo;s exercise also brings together some of what you&rsquo;ve already learned in class, and brings back the .  We will be working in the <em><a href="https://help.github.com/articles/markdown-basics/">markdown</a></em> syntax (<a href="https://help.github.com/articles/github-flavored-markdown/">github flavour</a>), and you will also be able to choose between</p>
+
+<ul>
+<li>working in the <a href="http://jsbin.com/jusena/10/edit?html,js,output">JSBin Online Editor</a>, which we&rsquo;ve seen before<br />
+using <a href="https://github.com/titaniumbones/maps-with-markdown">a copy you can download and work with on your own</a>.</li>
+</ul>
+
+<p>The latter version also serves as an introduction to the <a href="https://github.com/">Github code-sharing platform</a>. If you continue working with code-based academic projects, you will eventually want to learn more about git, which is an enormously powerful resource.  Our next assignment will also be made available on Github, so this is a chance to get a head start. If you want to work locally, I strongly recommend the <a href="https://atom.io/">Atom Code Editor</a>, which we&rsquo;ve discussed  If you also install the atom-html-preview package, you will get live updates of your code in a second tab, almost like in jsbin.  See the <a href="https://atom.io/docs/v1.0.2/using-atom-atom-packages">documentation</a> for more info.</p>
+
+<h2 id="what-is-a-gis">What is a GIS?</h2>
+
+<p>GIS is just a name for any system that tries to capture, manipulate, and represent geographical data. There are many GIS tools; the history department uses <a href="http://www.arcgis.com/features/">ArcGIS</a>, which is expensive and something of an industry standard, while many independent scholars use <a href="http://www.qgis.org/en/site/">QGIS</a>, which is free, open source, and not quite as powerful as Arc.</p>
+
+<p>The data in a GIS is all <a href="https://en.wikipedia.org/wiki/Geotagging">geotagged</a>, that is, assigned a set of geographical co-ordinates. This sounds simple but it is actually quite complex, since any co-ordinate system is a <em>simplified projection</em> of real, disordered, 3-dimensional space.  Many of the frustrations of working with GIS comes from the difficulty of rendering (say) historical map images <em>commensurate</em> with modern, satellite-derived maps.</p>
+
+<p>Within a GIS, information is generally accessed as a set of <strong>layers</strong>.  Data of specific types is <em>stratified</em> in layers, in much the same way that one creates image layers in photoshop. This image gives a typical example.  Note that the creation of layers is itself an intellectual decision, relying on judgments about the relationships between individual bits of data.<br />
+
+<figure>
+    
+        <img src="//iolandarch.com/wp-content/uploads/2014/09/overlay-analysis.jpg" />
+    
+    
+</figure>
+</p>
+
+<h2 id="controlling-google-maps">Controlling Google Maps</h2>
+
+<p>For our exercise today, we are really only interested in two layers:  the &ldquo;basemap&rdquo;, that is, the street or satellite map most of us use on an almost-daily basis; and the <em>marker layer</em>, in which all of the little pins on a map are stored.  We access these layers, and create those markers, with Javascript, by making <em>calls</em> to the <em>Google Maps API</em>.</p>
+
+<div class="ASIDE">
+An **API** is an "Application Programming Interface": a communications channel that lets programs talk to each other.  By "loading" the Google Maps API, our web pages can communicate directly with Google's servers to modify the map that Google is presenting to us.  In fact, most of the interesting stuff happening on the web these days happens via these machine-to-machine communication channels.  
+
+</div>
+
+<p>You don&rsquo;t have to understand the Google Maps API very thoroughly to be able to do this assignment.  The code comes pre-written; all you have to do is hack at it till it does what you want it to.</p>
+
+<h2 id="using-markdown">Using Markdown</h2>
+
+<p>It was useful to learn HTML but it is a pain to generate it by hand. You do have to do some hand-coding of HTML for this exercise, because some of the work actually happens in Javascript; but the rest of it can be done in markdown, which I find much easier to write than HTML.</p>
+
+<pre><code class="language-markdown"># one or more '#' marks indicates a headline
+
+### this one is &quot;level 3&quot;
+
+*a single asterisk is emphasis, or italics*
+
+**two are strong, or bold**
+
+An empty line separates paragraphs.
+
+&gt; blockquotes are made with angle brackets
+&gt; like this
+
+</code></pre>
+
+<p>You can also mix HTML in with markdown and it will generally render perfectly well. This is important for us because we have to create some <code>&lt;div&gt;</code> elements, which markdown can&rsquo;t do for us.</p>
+
+<p>While you&rsquo;re coding, reflect on <a href="https://www.youtube.com/watch?v=Q8gGsuWouDE&amp;t=0m20s">the satisfaction that good, honest work brings to the act of electronic communication</a>.</p>
+
+<h2 id="the-exercise">The Exercise</h2>
+
+<p>Today you will create a web page containing a Google Map.  The Google Map will contain 1-3 markers related to one of the themes we wrote on the blackboard in our last class.  It will also contain a VERY brief essay that discusses the historical significance of the events represented by those markers, all the while paying homage to the project of spatial history: foregrounding the spatial elements of the historical narrative at hand.  You&rsquo;re not handing in your work, so don&rsquo;t fret too much.  Try to enjoy yourself; but also work hard, as this is good preparation for our next assignment, which wil lbe handed out in class on Thursday.</p>
+
+<h2 id="the-code">The code</h2>
+
+<h3 id="javascript">Javascript</h3>
+
+<p>I have made the Javascript as simple as I can. There are more efficient and interesting ways to do this, but they are a little more complex. To make your markers &ndash; and to re-centre your map &ndash; you will need to modify the Javascript directly.</p>
+
+<h3 id="html">HTML</h3>
+
+<p>I <em>think</em> the only modifications you will need to make to the HTML are within the special &ldquo;textarea&rdquo; block containing the markdown syntax.  The rest you can probably safely ignore, though you might learn something from looking at it.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>The CSS for this exercise is deceptively simple.  We make only a few small changes tothe defaults, <em>but</em> we are cheating here.  The <a href="http://strapdownjs.com/">strapdown</a> javascript library which enables us to magically write using markdown, <em>also</em> magically loads the incredible <a href="http://getbootstrap.com/">bootstrap</a> web development framework, which includes some sophisticated CSS.  Try changing the first <kbd>textarea</kbd>&rsquo;s <kbd>theme=united</kbd> to one of the other supported &ldquo;swatches&rdquo; &ndash; I&rsquo;m a fan of &ldquo;cyborg&rdquo; and &ldquo;slate&rdquo;, myself.</p>
+
+</div>
+
+
+
+
+                    <div class="row">
+                        <div class="footer-panel" style="display:none">
+			  <p>Last revision: January 1, 0001
+                          <span style="float: right;">Hugo v documentation</span>
+                        </p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </section>
+
+                    </div>
+
+              </div>
+              
+          </section>
+      </section>
+     
+  </section>
+  
+
+    
+    <script type="text/javascript" src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/vendor/flesler/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/vendor/twitter/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/vendor/highlightjs/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/scripts.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+       <script>
+      /* Add headers to scrollspy, stolen form material-docs */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers. this is hideous, get rid of it. */
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="/js/lunr.js"></script>
+    <script type="text/javascript">
+    var lunrIndex, $results, pagesIndex;
+ 
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+ 
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+ 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+            }
+        }
+    }
+ 
+    var searchTerm = getQueryVariable('query');
+ 
+    
+    function initLunr() {
+        
+        jQuery.getJSON("/index.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+                lunrIndex = lunr(function() {
+                    this.field("title", { boost: 10 });
+                    this.field("tags", { boost: 5 });
+                    this.field("categories", { boost: 5 });
+                    this.field("content");
+                    this.ref("uri");
+ 
+                    pagesIndex.forEach(function (page) {
+                        this.add(page)
+                    }, this)
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+ 
+    
+    function initUI() {
+        $results = $("#lunr-results");
+        jQuery("#search").keyup(function() {
+            $results.empty();
+ 
+            
+            var query = $(this).val();
+            if (query.length < 2) {
+                return;
+            }
+ 
+            var results = search(query);
+ 
+            renderResults(results);
+        });
+    }
+ 
+    
+
+    function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+ 
+    
+
+    function renderResults(results) {
+        if (!results.length) {
+            return;
+        }
+ 
+        
+        results.slice(0, 100).forEach(function(result) {
+            var $result = jQuery("<li>");
+            $result.append(jQuery("<a>", {
+                href: result.uri,
+                text: result.title
+            }));
+            $results.append($result);
+        });
+    }
+ 
+    
+    initLunr();
+ 
+    jQuery(document).ready(function() {
+        initUI();
+    });
+    </script>
+
+  </body>
+</html>
+

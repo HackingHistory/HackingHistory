@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experiment in digital community">
+    <meta name="author" content="Matt Price">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Hugo - Lab 02: Understanding HTML</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/content-style.css" />
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/css/monokai-sublime.css">
+
+  </head>
+
+  <body>
+  
+  <section id="container" class="">
+
+      
+      <header class="header black-bg">
+            <div class="toggle-nav">
+                <i class="fa fa-bars"></i>
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            
+            <div class="pull-right">
+              <a href="/" class="logo"><img src="/images/hh-logo-small.png" style="height: 40px; vertical-align: bottom;"> <span style="font-size: small; text-transform: none;"></span></a>
+              
+              </div>
+            
+            <div class="top-nav notification-row">
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="nav title-row" id="top_menu">
+                <h1 class="nav top-menu">Lab 02: Understanding HTML</h1>
+            </div>
+      </header>
+      
+
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    
+        
+        <ul class="sidebar-menu">
+          
+          <li>
+          <div class="lunr-search">
+<p><b>Search:</b></p>
+    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
+     <ul id="lunr-results"></ul>
+</div>
+
+          </li>
+          
+          
+               
+      
+             
+            <li>
+              <a class="" href="/article/syllabus/">
+                
+                
+                <span>Syllabus</span>
+                </a>
+               
+
+               
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Assignments</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/assignment/overview/">Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/participation/">Participation</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/class-project-overview/">Class Project Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/project-proposal/">Project Proposal</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-05-wordpress-themes/">STA 03: Wordpress Sites</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/essay-assignment/">Essay Assignment</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-02-oral-history/">STA 02: Oral History</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/assignments/">Assignments</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-01-html--css/">STA 01: HTML &amp; CSS</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu active">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Labs</span>
+                <span class="menu-arrow fa fa-angle-down"></span>
+            </a>
+            <ul class="sub open">
+
+              
+                   
+                 <li><a href="/lab/lab-getting-started/">Lab 01: Getting Started</a> </li>
+                  
+                 
+                
+                <li class="active toc-node"><a href="javascript:;">
+                    <span>Lab 02: Understanding HTML</span><span class="toc-arrow fa fa-angle-down"></span></a>
+                
+                
+                  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#tags">Tags</a>
+<ul>
+<li><a href="#important-tags">Important tags</a>
+<ul>
+<li><a href="#document-structure">Document Structure</a></li>
+<li><a href="#text-properties">Text Properties</a></li>
+<li><a href="#text-functions">Text Functions</a></li>
+<li><a href="#linking">Linking</a></li>
+</ul></li>
+<li><a href="#exercise-0">Exercise 0</a></li>
+<li><a href="#exercise-1">Exercise 1</a></li>
+<li><a href="#styles">Styles</a>
+<ul>
+<li><a href="#exercise-2">Exercise 2</a></li>
+</ul></li>
+<li><a href="#scripts">Scripts</a>
+<ul>
+<li><a href="#exercise-3">Exercise 3</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#hacking-your-way-to-html-mastery">Hacking your way to HTML mastery!</a>
+<ul>
+<li><a href="#tools">Tools!</a></li>
+<li><a href="#tutorials">Tutorials</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-css-and-web-styles/">Lab 03: CSS and Web Styles</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-javascript-basics/">Lab 05: Javascript Basics</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-05-spatial-history-with-google-maps/">Lab 05: Spatial History with Google Maps</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-wordpress-and-wordpress-themes/">Lab 06: Wordpress &amp; Wordpress Themes</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-1l-from-css-to-sass/">Lab 10: From CSS to SASS!</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/labs-and-notes/">Labs and Notes</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Miscellaneous</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/">Hacking History: Smut Edition</a> </li>
+                  
+                 
+                   
+                 <li><a href="/other/tools/">Tools for Hacking History</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+             
+          <li><a href="/slides/">Class Slides & Notes</a></li>
+
+          
+
+
+                        <li> <a href="/article/about/" target="blank"><i class='fa fa-life-ring'></i> <span>About This Site</span></a> </li>
+
+            
+               
+             
+        </ul>
+        
+
+    </div>
+
+</aside>
+
+
+      
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+                  
+                      
+                      
+                          
+                          
+                          
+                      
+                      
+                  
+              
+
+              <div class="row">
+
+                <div class="col-md-12">
+                    <section class="panel">
+                          
+                              
+                          
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 cse">
+                              
+                            </div>
+                        </div>
+
+
+<div class="col-lg-12 col-md-12">
+  
+
+<p>One of the goals of this week is to help you think of the Web as a protocol-driven infrastructure.  The language in which that infrastructure operates is called <a href="http://en.wikipedia.org/wiki/HTML">HTML</a>. Like a traveller in a foreign country, you may not need to be fluent in this language, but if you know just a little bit then you&rsquo;ll be much more comfortable.  In this exercise we will introduce an online tool called <a href="http://jsbin.com/welcome/1/edit">JSBin</a>, now one of many such tools available online, and somewhat similar to the <a href="http://codeacademy.net">Codeacademy</a> website you will be using for your assignments.</p>
+
+<p>I strongly advise you to also take this opportunity to download the <a href="http://atom.io">Atom text editor</a>, as well. Further instructions are on the Tools page.</p>
+
+<h2 id="tags">Tags</h2>
+
+<p>An HTML Document is composed of <a href="http://en.wikipedia.org/wiki/HTML_element">elements</a> marked off by <a href="http://www.w3schools.com/tags/default.asp">tags</a>.  The elements look like this:</p>
+
+<pre><code class="language-html">&lt;p&gt;This is a paragraph&lt;/p&gt;
+</code></pre>
+
+<p>Note the opening and closing tags, which surround the text you want to have marked up.</p>
+
+<h3 id="important-tags">Important tags</h3>
+
+<p>Here are a few examples of important tags, though there are many, many more in current versions of HTML.</p>
+
+<h4 id="document-structure">Document Structure</h4>
+
+<p>Certain tags exist solely to lend <strong>structure</strong> to a document.</p>
+
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;header&gt;&lt;/header&gt;
+
+    &lt;article&gt;
+      &lt;div&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;footer&gt;&lt;/footer&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h4 id="text-properties">Text Properties</h4>
+
+<p>Others give instructions for emphasizing text</p>
+
+<pre><code class="language-html">1  &lt;b&gt;bold&lt;/b&gt; &lt;strong&gt;strong&lt;/strong&gt;
+2  &lt;i&gt;italic&lt;/i&gt; &lt;em&gt;emphasis&lt;/em&gt;
+</code></pre>
+
+<h4 id="text-functions">Text Functions</h4>
+
+<p>Still others define pieces of structure in a functional way that generally also affects the way text will look on your screen.</p>
+
+<pre><code class="language-html"> 1  &lt;h1&gt;This is a top-level Heading&lt;/h1&gt;
+ 2  &lt;h2&gt;While this is a lower-level heading&lt;/h2&gt;
+ 3  &lt;p&gt;..and this is a mere paragraph&lt;/p&gt;
+ 4  &lt;ul&gt;
+ 5    &lt;li&gt;This is a list item&lt;/li&gt;
+ 6    &lt;li&gt;And this is a second item&lt;/li&gt;
+ 7  &lt;/ul&gt;
+ 8  
+ 9  &lt;ol&gt;
+10    &lt;li&gt;this is a different kind of list&lt;/li&gt;
+11    &lt;li&gt;you'll see the differences soon&lt;/li&gt;
+12  &lt;/ol&gt;
+</code></pre>
+
+<h4 id="linking">Linking</h4>
+
+<p>The fundamental, breathtaking feature of the web is its capacity to create links between documents, images, media sources, etc., with absolute disregard for where those resources are physiclaly stored.  The syntax for making a link is as follows</p>
+
+<pre><code class="language-html">1  &lt;a href=&quot;&quot; target=&quot;&quot;&gt;Text &lt;/a&gt;
+2  &lt;img src=&quot;&quot; alt=&quot;&quot; title=&quot;&quot;/&gt;
+3  &lt;video&gt;
+4    &lt;source src=&quot;&quot; type=&quot;&quot;&gt;
+5  &lt;/video&gt;
+6  &lt;script src=&quot;&quot; lang=&quot;&quot;/&gt;
+</code></pre>
+
+<p>Figure out what these mean by browsing on w3schools. Work especially hard at the <a> tag.  Hint:  the standard syntax is <a href="link">Text</a> and there are plenty of instances in the code below.</p>
+
+<h3 id="exercise-0">Exercise 0</h3>
+
+<p>Navigate to <a href="http://jsbin.com/onopaz/edit?html,output">this page</a>.  This is the JSBin editor, an online tool for inspecting code.</p>
+
+<h3 id="exercise-1">Exercise 1</h3>
+
+<p>First, let&rsquo;s quickly compare the text of an old post of mine:</p>
+
+<blockquote>
+<p>The WWW as Public Sphere<br />
+Posted on September 21, 2010 by admin</p>
+
+<p>Just a few quick words about the readings this week, which concern the idea of the “Public Sphere“. This phrase is rooted in ideas about enlightenment that stretch at least back to Immanuel Kant. The analyses of Jürgen Habermas (SEP entry), in particular, developed the idea of a sort of virtual space of critical discussion&hellip;</p>
+
+<p>Some of the features of this &ldquo;authentic public sphere&rdquo; would be</p>
+
+<ul>
+<li>a space free from political repression</li>
+<li>a space accessible to all members of society</li>
+<li>a form of discourse in which ideas are evaluated on their own merits exclusively, and not arbitrated based on some set of characteristics of the speaker</li>
+</ul>
+</blockquote>
+
+<p>with the HTML code that generates what you would see on your screen if you went to the website from that year:</p>
+
+<pre><code class="language-html"> 1  &lt;div id=&quot;post-77&quot; class=&quot;post-77 post type-post hentry category-notes-for-class tag-publicsphere&quot;&gt;
+ 2                                          &lt;h1 class=&quot;entry-title&quot;&gt;The WWW as Public Sphere&lt;/h1&gt;
+ 3  
+ 4                                          &lt;div class=&quot;entry-meta&quot;&gt;
+ 5                                                  &lt;span class=&quot;meta-prep meta-prep-author&quot;&gt;Posted on&lt;/span&gt; 
+ 6  &lt;a href=&quot;http://www.hackinghistory.ca/2010/09/21/the-www-as-public-sphere/&quot; title=&quot;11:03 am&quot; rel=&quot;bookmark&quot;&gt;&lt;span class=&quot;entry-date&quot;&gt;September 21, 2010&lt;/span&gt;&lt;/a&gt; &lt;span class=&quot;meta-sep&quot;&gt;by&lt;/span&gt; 
+ 7  &lt;span class=&quot;author vcard&quot;&gt;&lt;a class=&quot;url fn n&quot; href=&quot;http://www.hackinghistory.ca/author/admin/&quot; title=&quot;View all posts by admin&quot;&gt;admin&lt;/a&gt;&lt;/span&gt;					&lt;/div&gt;&lt;!-- .entry-meta --&gt;
+ 8  
+ 9  &lt;div class=&quot;entry-content&quot;&gt;
+10          &lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;amp;rft.title=The WWW as Public Sphere&amp;amp;rft.aulast=Price&amp;amp;rft.aufirst=Matt&amp;amp;rft.subject=Pre-class notes&amp;amp;rft.source=Hacking History (His455)&amp;amp;rft.date=2010-09-21&amp;amp;rft.type=&amp;amp;rft.format=text&amp;amp;rft.identifier=http://www.hackinghistory.ca/2010/09/21/the-www-as-public-sphere/&amp;amp;rft.language=English&quot;&gt;&lt;/span&gt;
+11  
+12  &lt;div class=&quot;sticky_post&quot;&gt;&lt;p&gt; Just a few quick words about the readings this week, which concern the idea of the  &amp;#8220;
+13  &lt;a href=&quot;http://en.wikipedia.org/wiki/Public_sphere&quot;&gt;Public Sphere&lt;/a&gt;&amp;#8220;.  This phrase is rooted in ideas about &lt;a href=&quot;http://plato.stanford.edu/entries/enlightenment/&quot;&gt;enlightenment&lt;/a&gt; that stretch at least back to 
+14  &lt;a href=&quot;http://en.wikipedia.org/wiki/Immanuel_Kant&quot;&gt;Immanuel Kant&lt;/a&gt;.  The analyses of 
+15  &lt;a href=&quot;http://en.wikipedia.org/wiki/J%C3%BCrgen_Habermas&quot;&gt;Jürgen Habermas&lt;/a&gt; 
+16  (&lt;a href=&quot;http://plato.stanford.edu/entries/habermas/&quot;&gt;SEP entry&lt;/a&gt;), in particular, developed the idea of a sort of virtual space of critical discussion  &lt;/p&gt;
+17  
+18  &lt;/div&gt;
+19                                                                                          &lt;/div&gt;&lt;!-- .entry-content --&gt;
+</code></pre>
+
+<p>They look pretty different, right?  Now, paste the text-only version into the HTML tab in <a href="http://jsbin.com/waxufekequte/2/edit">this JSBin page</a>.</p>
+
+<p>Figure out how to accomplish the following tasks:</p>
+
+<ol>
+<li>Make the title &ldquo;The WWW and the Public Sphere&rdquo; into a heading.</li>
+<li>Add a link to &ldquo;<a href="http://www.hackinghistory.ca/author/admin/">http://www.hackinghistory.ca/author/admin/</a>&rdquo; to the word &ldquo;admin&rdquo; in the second line.</li>
+<li>Italicize the date line.</li>
+<li>Organize the elements so that the appropriate content is nn the <header> tag, and the rest in the &ldquo;article&rdquo;.</li>
+</ol>
+
+<p>These are all pretty easy, you can figure them out either by inspecting the marked-up version I reproduced here, or following the w3schools HTML tutorials.</p>
+
+<h3 id="styles">Styles</h3>
+
+<p>Styles in HTML are pretty complex, see the <a href="http://www.w3schools.com/html/html_css.asp">HTML style tutorials</a> on w3schools.  Check out their very quick description of <a href="http://www.w3schools.com/css/css_intro.asp">css</a>.</p>
+
+<h4 id="exercise-2">Exercise 2</h4>
+
+<p>Go back to your TryIt experiment at w3schools.  Can you make the text render in the same styles that are used by the website?  There&rsquo;s a clue in the <head> element of any page from the site.  Hint: search for &ldquo;css&rdquo; in the sourcecode&hellip;</p>
+
+<h3 id="scripts">Scripts</h3>
+
+<p>Though HTML is the language of the web, modern HTML (HTML 4, HTML 5) have &ldquo;translators&rdquo; of a sort that allow other languages to run inside the web page.  this is actually incredibly powerful, and allows amazing things that were unheard of in the early days of the web, like dynamically-generated lists, moving images, the embedding of video and so forth.  You don&rsquo;t have to know how to script (I can&rsquo;t really use javascript, for instance) but you should understand that scripting is what makes a lot of today&rsquo;s web work the way it does.</p>
+
+<h4 id="exercise-3">Exercise 3</h4>
+
+<p>Inspect the source code of three complex pages on the web and find every instance of a script tag.  Note anything you think is interesting about it.</p>
+
+<h2 id="hacking-your-way-to-html-mastery">Hacking your way to HTML mastery!</h2>
+
+<h3 id="tools">Tools!</h3>
+
+<ul>
+<li><strong>View source.</strong> When you right click on a web page in any modern browser, you will see a &lsquo;view source&rsquo; option.</li>
+<li><strong>developer tools</strong>.  The Developer Tools for <a href="https://developer.chrome.com/devtools">Chrome</a> and <a href="https://developer.mozilla.org/en/docs/Tools">Firefox</a> are both amazing.  They allow you to temporarily change the code (HTML, CSS, and Javascript) running on any website, and thus test out your ideas for changes.  We will use this tool <strong>A LOT</strong> over the course of the year.</li>
+<li><strong><a href="http://jsbin.com">jsbin</a></strong>. The awesome real-time html/javascript previewer.</li>
+</ul>
+
+<h3 id="tutorials">Tutorials</h3>
+
+<ul>
+<li><a href="http://codeacademy.com">Codeacademy</a> may have the best intro to HTML sequence</li>
+<li><a href="http://w3schools.com/">W3 Schools</a> provides excellent tutorials.</li>
+<li><a href="https://developer.mozilla.org/en/HTML">The Mozilla Developers&rsquo; Network HTML Reference</a> is where I go when I need a detailed explanation of something.</li>
+</ul>
+
+</div>
+
+
+
+
+                    <div class="row">
+                        <div class="footer-panel" style="display:none">
+			  <p>Last revision: January 1, 0001
+                          <span style="float: right;">Hugo v documentation</span>
+                        </p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </section>
+
+                    </div>
+
+              </div>
+              
+          </section>
+      </section>
+     
+  </section>
+  
+
+    
+    <script type="text/javascript" src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/vendor/flesler/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/vendor/twitter/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/vendor/highlightjs/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/scripts.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+       <script>
+      /* Add headers to scrollspy, stolen form material-docs */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers. this is hideous, get rid of it. */
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="/js/lunr.js"></script>
+    <script type="text/javascript">
+    var lunrIndex, $results, pagesIndex;
+ 
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+ 
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+ 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+            }
+        }
+    }
+ 
+    var searchTerm = getQueryVariable('query');
+ 
+    
+    function initLunr() {
+        
+        jQuery.getJSON("/index.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+                lunrIndex = lunr(function() {
+                    this.field("title", { boost: 10 });
+                    this.field("tags", { boost: 5 });
+                    this.field("categories", { boost: 5 });
+                    this.field("content");
+                    this.ref("uri");
+ 
+                    pagesIndex.forEach(function (page) {
+                        this.add(page)
+                    }, this)
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+ 
+    
+    function initUI() {
+        $results = $("#lunr-results");
+        jQuery("#search").keyup(function() {
+            $results.empty();
+ 
+            
+            var query = $(this).val();
+            if (query.length < 2) {
+                return;
+            }
+ 
+            var results = search(query);
+ 
+            renderResults(results);
+        });
+    }
+ 
+    
+
+    function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+ 
+    
+
+    function renderResults(results) {
+        if (!results.length) {
+            return;
+        }
+ 
+        
+        results.slice(0, 100).forEach(function(result) {
+            var $result = jQuery("<li>");
+            $result.append(jQuery("<a>", {
+                href: result.uri,
+                text: result.title
+            }));
+            $results.append($result);
+        });
+    }
+ 
+    
+    initLunr();
+ 
+    jQuery(document).ready(function() {
+        initUI();
+    });
+    </script>
+
+  </body>
+</html>
+

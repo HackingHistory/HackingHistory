@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experiment in digital community">
+    <meta name="author" content="Matt Price">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Hugo - Lab 10: From CSS to SASS!</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/content-style.css" />
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/css/monokai-sublime.css">
+
+  </head>
+
+  <body>
+  
+  <section id="container" class="">
+
+      
+      <header class="header black-bg">
+            <div class="toggle-nav">
+                <i class="fa fa-bars"></i>
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            
+            <div class="pull-right">
+              <a href="/" class="logo"><img src="/images/hh-logo-small.png" style="height: 40px; vertical-align: bottom;"> <span style="font-size: small; text-transform: none;"></span></a>
+              
+              </div>
+            
+            <div class="top-nav notification-row">
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="nav title-row" id="top_menu">
+                <h1 class="nav top-menu">Lab 10: From CSS to SASS!</h1>
+            </div>
+      </header>
+      
+
+<aside>
+  <div id="sidebar" class="nav-collapse">
+    
+        
+        <ul class="sidebar-menu">
+          
+          <li>
+          <div class="lunr-search">
+<p><b>Search:</b></p>
+    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
+     <ul id="lunr-results"></ul>
+</div>
+
+          </li>
+          
+          
+               
+      
+             
+            <li>
+              <a class="" href="/article/syllabus/">
+                
+                
+                <span>Syllabus</span>
+                </a>
+               
+
+               
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Assignments</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/assignment/overview/">Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/participation/">Participation</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/class-project-overview/">Class Project Overview</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/project-proposal/">Project Proposal</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-05-wordpress-themes/">STA 03: Wordpress Sites</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/essay-assignment/">Essay Assignment</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-02-oral-history/">STA 02: Oral History</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/assignments/">Assignments</a> </li>
+                  
+                 
+                   
+                 <li><a href="/assignment/sta-01-html--css/">STA 01: HTML &amp; CSS</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu active">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Labs</span>
+                <span class="menu-arrow fa fa-angle-down"></span>
+            </a>
+            <ul class="sub open">
+
+              
+                   
+                 <li><a href="/lab/lab-getting-started/">Lab 01: Getting Started</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-understanding-html/">Lab 02: Understanding HTML</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-css-and-web-styles/">Lab 03: CSS and Web Styles</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-javascript-basics/">Lab 05: Javascript Basics</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-05-spatial-history-with-google-maps/">Lab 05: Spatial History with Google Maps</a> </li>
+                  
+                 
+                   
+                 <li><a href="/lab/lab-wordpress-and-wordpress-themes/">Lab 06: Wordpress &amp; Wordpress Themes</a> </li>
+                  
+                 
+                
+                <li class="active toc-node"><a href="javascript:;">
+                    <span>Lab 10: From CSS to SASS!</span><span class="toc-arrow fa fa-angle-down"></span></a>
+                
+                
+                  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-s-wrong-with-plain-old-css">What&rsquo;s wrong with plain old CSS?</a></li>
+<li><a href="#what-s-the-solution">What&rsquo;s the solution?</a>
+<ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#loops-and-conditionals">Loops and Conditionals</a></li>
+<li><a href="#mixins">Mixins</a></li>
+<li><a href="#excited-yet">Excited yet?</a></li>
+</ul></li>
+<li><a href="#playing-with-sass">Playing with SASS</a></li>
+<li><a href="#using-foundation-on-your-personal-site">Using Foundation on your personal site</a></li>
+<li><a href="#things-to-put-into-the-playground">things to put into the playground</a></li>
+</ul></li>
+</ul>
+</nav>
+                </li>
+                  
+                 
+                   
+                 <li><a href="/lab/labs-and-notes/">Labs and Notes</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+            
+              
+
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+                
+                
+                <span>Miscellaneous</span>
+                <span class="menu-arrow fa fa-angle-right"></span>
+            </a>
+            <ul class="sub">
+
+              
+                   
+                 <li><a href="/">Hacking History: Smut Edition</a> </li>
+                  
+                 
+                   
+                 <li><a href="/other/tools/">Tools for Hacking History</a> </li>
+                  
+                     
+                 </ul>
+             
+       </li>
+             
+          <li><a href="/slides/">Class Slides & Notes</a></li>
+
+          
+
+
+                        <li> <a href="/article/about/" target="blank"><i class='fa fa-life-ring'></i> <span>About This Site</span></a> </li>
+
+            
+               
+             
+        </ul>
+        
+
+    </div>
+
+</aside>
+
+
+      
+      <section id="main-content">
+          <section class="wrapper">
+
+              
+                  
+                      
+                      
+                          
+                          
+                          
+                      
+                      
+                  
+              
+
+              <div class="row">
+
+                <div class="col-md-12">
+                    <section class="panel">
+                          
+                              
+                          
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 cse">
+                              
+                            </div>
+                        </div>
+
+
+<div class="col-lg-12 col-md-12">
+  
+
+<p>Now that you are alll HTML/CSS/PHP ninjas&hellip;.  it&rsquo;s time for the next language!  The web frmework we&rsquo;re using &ndash; &ldquo;Foundation&rdquo; &ndash; uses a language called SASS to manage style instructions.  It takes a little getting used to be soon you will start to love it, I promise.</p>
+
+<h2 id="what-s-wrong-with-plain-old-css">What&rsquo;s wrong with plain old CSS?</h2>
+
+<p>CSS is great, but it has some problems:</p>
+
+<ul>
+<li><strong>it&rsquo;s repetitive:</strong> often you find yourself writing the same color codes over and over again in different selectors:</li>
+</ul>
+
+<pre><code class="language-css">h1 {
+    color: #ab23ab;
+}
+h2 {
+    color: #ab23ab;
+}
+</code></pre>
+
+<ul>
+<li><strong>it&rsquo;s brittle:</strong> you may spend a long time figuring out the right proportions between, say, the font sizes for h1, h2,h3, and h4, or the right dimensions for div.class1 and div.class2.  Then as you&rsquo;re working, you find you actually want h1 to be smaller, or div.class2 to take up more of the screen.  Then you have to go back to your CSS and modify all of the individual values you just entered.</li>
+</ul>
+
+<pre><code class="language-css">h1 {
+    font-size: 2.0rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+
+div.class1 {
+    width: 38%;
+}
+
+div.class2 {
+    width: 58%
+}
+
+</code></pre>
+
+<ul>
+<li><strong>it&rsquo;s hard to read:</strong> when CSS files get complicated, they also tend to get a little convoluted;  it can be difficult to make a logical, easy-to-follow structure that makes sense of everything.</li>
+</ul>
+
+<h2 id="what-s-the-solution">What&rsquo;s the solution?</h2>
+
+<p>More and more web developers have turned to <strong>CSS preprocessors</strong> as a solution to this tricky problem.  A preprocessor extends the CSS language to make it capable of more cool tricks, and when you&rsquo;re ready, <em>processes</em> the code you&rsquo;ve written to allow browsers to read it.  In effect they are new languages, which are &ldquo;supersets&rdquo; of the CSS language.  The two main preprocessors are SASS and LESS, and in our class we will use SASS (for no really good reason, just because).  SASS lets you:</p>
+
+<ul>
+<li><strong>stop repeating yourself</strong></li>
+<li><strong>write cleaner code</strong></li>
+<li>and as a result, <strong>write maintainable code</strong> &ndash; code that it&rsquo;s easy to understand when you come back to look at it two weeks or six months or two years later.</li>
+</ul>
+
+<p>How does it do this, you might ask?  Well, let&rsquo;s see.</p>
+
+<h3 id="variables">Variables</h3>
+
+<p>By now you should be getting a sense of how fantastic variables are.  PHP templates would be useless without them &ndash; they let wordpress insert different text and HTMl content in the various slots that you&rsquo;ve provided in your layout.  For instance, <code>$post-&gt;title</code> is a variable (actually, it&rsquo;s an <code>object property</code>, but let&rsquo;s not be too formal), that retrieves&hellip; the Title!  Almost all programming languages use variables, but CSS doesn&rsquo;t.  However:  SASS does!</p>
+
+<pre><code class="language-scss">$header-color: #eeeeee;
+h1 {
+  color: $header-color;
+  font-size:  44px;
+  }
+h2 {
+    color: $header-color;
+    font-size: 37px;  
+}
+
+</code></pre>
+
+<p>This will generate the following CSS:</p>
+
+<pre><code class="language-css">
+h1 {
+     color: #eeeeee;
+     font-size:  44px;
+     }
+h2 {
+    color: #eeeeee;
+    font-size: 37px;  
+}
+</code></pre>
+
+<p>check it out!  Now whenever you want two elements to be the same color, you can just type the variable name instead of inserting a complicated color code.  And you can change the color of a bunch of elements all at once, simply by changing the variable value.</p>
+
+<h3 id="functions">Functions</h3>
+
+<p>You can also manipulate values using functions.  You can write your own functions (complicated!) or use the built-in functions SASS provides.  Here&rsquo;s an example.</p>
+
+<pre><code class="language-scss">$header-color: #eeeeee;
+h1 {
+  color:$header-color;
+  background-color: scale-color($header-color, $lightness=30%)
+  }
+
+h2 {
+  color: scale-color($header-color, $lightness=-10%);
+  }
+
+
+</code></pre>
+
+<p>There are many built-in color manipulation functions in SASS. Here&rsquo;s a partial list:</p>
+
+<ul>
+<li>darken()</li>
+<li>lighten()</li>
+<li>saturate()</li>
+<li>desaturate()</li>
+<li>adjust-hue()</li>
+<li>invert()</li>
+<li>complement()</li>
+<li>scale-color()</li>
+</ul>
+
+<p><code>scale-color()</code> is probably the most versatile.  Let&rsquo;s look at it again:</p>
+
+<pre><code class="language-scss">background-color: scale-color($header-color, $lightness:30%)
+</code></pre>
+
+<p>Note the different parts:<br />
+<strong>scale-color</strong> <em>($header-color, $lightness=30%)</em>. This function takes one main argument &ndash; a color &ndash; and also a number of possible &ldquo;parameters&rdquo;, of the form:</p>
+
+<pre><code class="language-scss">$lightness:-XX%, hue:-XXXdeg, saturation:-XX%, red:XX, blue:xXX, green:XX
+</code></pre>
+
+<p>You can see in our example that I make the header text color by lightening the header background.</p>
+
+<h3 id="loops-and-conditionals">Loops and Conditionals</h3>
+
+<p>:PROPERTIES:<br />
+SASS contains all the basic programming syntax you want from a simple language:  conditionals, loops, and a few other tricks.  So for instance, you can try:</p>
+
+<pre><code class="language-scss">// the number of columns
+@for $i from 1 through $total-columns {
+  .fade-#{$i} {
+    background-color: scale-color($body-bg, $lightness:-15%*$i);
+    color: scale-color($green, $lightness:15%*($i - 1));
+
+  }
+}
+</code></pre>
+
+<p>This piece of code will create a bunch of CSS stanzas, like this:</p>
+
+<pre><code class="language-css">.fade-1 {
+  background-color: #d9d9d9;
+  color: #33cc33; }
+
+.fade-2 {
+  background-color: #b3b3b3;
+  color: #70db70; }
+
+.fade-3 {
+  background-color: #8c8c8c;
+  color: #adebad; }
+
+.fade-4 {
+  background-color: #666666;
+  color: #ebfaeb; }
+</code></pre>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>It gets even crazier!  You can define &ldquo;mixins&rdquo; that you can add to whatever classes you want.  These mixins can contain complicated functions or whatever.  Here&rsquo;s an example:</p>
+
+<pre><code class="language-sass">@mixin my-border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include my-border-radius(10px); }
+
+.some-other-box { @include my-border-radius(10px); }
+</code></pre>
+
+<p>This generates the code:</p>
+
+<pre><code class="language-css">.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+.some-other-box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+</code></pre>
+
+<h3 id="excited-yet">Excited yet?</h3>
+
+<p>You Should be.  There is still plenty to learn, but we&rsquo;ll stop here for now.  check out the SASS website for more info.</p>
+
+<h2 id="playing-with-sass">Playing with SASS</h2>
+
+<p>I have a series of JSBins set up from last year, here they are:</p>
+
+<ul>
+<li><a href="http://jsbin.com/xiyosu/edit?html,css">Intro to SASS variables</a></li>
+<li><a href="http://jsbin.com/vomepovate/edit?html,css,output">A little bit of programming</a></li>
+<li><a href="http://jsbin.com/gajile/edit?html">Sneak Peek at Foundation</a></li>
+</ul>
+
+<h2 id="using-foundation-on-your-personal-site">Using Foundation on your personal site</h2>
+
+<p>For fun, I have also enabled real-time compiling of SCSS files in the &ldquo;grunterie&rdquo; theme on your personal websites.  Feel free to try it out!</p>
+
+<h2 id="things-to-put-into-the-playground">things to put into the playground</h2>
+
+<ul>
+<li>text, background colors; grid sizes; div types; font sizes;</li>
+</ul>
+
+</div>
+
+
+
+
+                    <div class="row">
+                        <div class="footer-panel" style="display:none">
+			  <p>Last revision: January 1, 0001
+                          <span style="float: right;">Hugo v documentation</span>
+                        </p>
+                        
+                        </div>
+                    </div>
+
+                    </div>
+                    </section>
+
+                    </div>
+
+              </div>
+              
+          </section>
+      </section>
+     
+  </section>
+  
+
+    
+    <script type="text/javascript" src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/vendor/flesler/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/vendor/twitter/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/vendor/highlightjs/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/scripts.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+       <script>
+      /* Add headers to scrollspy, stolen form material-docs */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers. this is hideous, get rid of it. */
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="/js/lunr.js"></script>
+    <script type="text/javascript">
+    var lunrIndex, $results, pagesIndex;
+ 
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+ 
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+ 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+            }
+        }
+    }
+ 
+    var searchTerm = getQueryVariable('query');
+ 
+    
+    function initLunr() {
+        
+        jQuery.getJSON("/index.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+                lunrIndex = lunr(function() {
+                    this.field("title", { boost: 10 });
+                    this.field("tags", { boost: 5 });
+                    this.field("categories", { boost: 5 });
+                    this.field("content");
+                    this.ref("uri");
+ 
+                    pagesIndex.forEach(function (page) {
+                        this.add(page)
+                    }, this)
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+ 
+    
+    function initUI() {
+        $results = $("#lunr-results");
+        jQuery("#search").keyup(function() {
+            $results.empty();
+ 
+            
+            var query = $(this).val();
+            if (query.length < 2) {
+                return;
+            }
+ 
+            var results = search(query);
+ 
+            renderResults(results);
+        });
+    }
+ 
+    
+
+    function search(query) {
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+ 
+    
+
+    function renderResults(results) {
+        if (!results.length) {
+            return;
+        }
+ 
+        
+        results.slice(0, 100).forEach(function(result) {
+            var $result = jQuery("<li>");
+            $result.append(jQuery("<a>", {
+                href: result.uri,
+                text: result.title
+            }));
+            $results.append($result);
+        });
+    }
+ 
+    
+    initLunr();
+ 
+    jQuery(document).ready(function() {
+        initUI();
+    });
+    </script>
+
+  </body>
+</html>
+
